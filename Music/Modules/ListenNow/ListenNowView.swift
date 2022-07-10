@@ -50,8 +50,13 @@ struct ListenNowView: View {
         NavigationView {
             List {
                 TopPicksSection(topPicks: viewModel.topPicks)
-                RecentlyPlayedSection(recentlyPlayed: viewModel.recentlyPlayed)
+                MusicItemSection(type: .recently, title: "Recently Played", recentlyPlayed: viewModel.recentlyPlayed)
                     .padding(.top, 10)
+                MusicItemSection(type: .standart, title: "Lil Nas X Fans Like", recentlyPlayed: viewModel.recentlyPlayed)
+                    .padding(.top, 10)
+                MusicItemSection(type: .standart, title: "Stations for You", recentlyPlayed: viewModel.recentlyPlayed)
+                    .padding(.top, 10)
+                TopPicksSection(topPicks: viewModel.topPicks)
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)
