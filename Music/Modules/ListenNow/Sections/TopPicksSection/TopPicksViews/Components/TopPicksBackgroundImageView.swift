@@ -10,7 +10,7 @@ import SwiftUI
 struct TopPicksBackgroundImageView: View {
     var imageUrlString: String
     var body: some View {
-        AsyncImage(url: URL(string: imageUrlString)!) { image in
+        AsyncImage(url: URL(string: imageUrlString)) { image in
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)

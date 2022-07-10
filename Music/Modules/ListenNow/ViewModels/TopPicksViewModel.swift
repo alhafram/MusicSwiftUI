@@ -32,6 +32,19 @@ struct TopPicksViewModel: Hashable {
         }
     }
     
+    struct MusicItem: Hashable {
+        var title: String
+        var subtitle: String
+        var imageUrl: String
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(title)
+            hasher.combine(subtitle)
+            hasher.combine(imageUrl)
+        }
+    }
+    
     var topPicks: [TopPick]
+    var recentlyPlayed: [MusicItem]
 }
 

@@ -31,6 +31,9 @@
 		50F4729E287B081700996773 /* TopPickSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4729D287B081700996773 /* TopPickSubtitleView.swift */; };
 		50F472A0287B087400996773 /* TopPicksCenterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4729F287B087400996773 /* TopPicksCenterTextView.swift */; };
 		50F472A2287B09DC00996773 /* TopPicksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472A1287B09DC00996773 /* TopPicksSection.swift */; };
+		50F472A6287B20EA00996773 /* RecentlyPlayedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472A5287B20EA00996773 /* RecentlyPlayedSection.swift */; };
+		50F472A9287B23AF00996773 /* MusicItemBackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472A8287B23AF00996773 /* MusicItemBackgroundImageView.swift */; };
+		50F472AB287B23D300996773 /* MusicItemContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472AA287B23D300996773 /* MusicItemContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		50F4729D287B081700996773 /* TopPickSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPickSubtitleView.swift; sourceTree = "<group>"; };
 		50F4729F287B087400996773 /* TopPicksCenterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksCenterTextView.swift; sourceTree = "<group>"; };
 		50F472A1287B09DC00996773 /* TopPicksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksSection.swift; sourceTree = "<group>"; };
+		50F472A5287B20EA00996773 /* RecentlyPlayedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedSection.swift; sourceTree = "<group>"; };
+		50F472A8287B23AF00996773 /* MusicItemBackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItemBackgroundImageView.swift; sourceTree = "<group>"; };
+		50F472AA287B23D300996773 /* MusicItemContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItemContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				50D464A12879D608001D4829 /* ListenNowView.swift */,
+				50F472A7287B238600996773 /* CommonComponents */,
+				50F472A3287B20C100996773 /* Sections */,
 				504559C1287B045000DA6569 /* ViewModels */,
-				504559BB287B031800DA6569 /* TopPicksSection */,
 			);
 			path = ListenNow;
 			sourceTree = "<group>";
@@ -254,6 +261,32 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		50F472A3287B20C100996773 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				50F472A4287B20CA00996773 /* RecentlyPlayedSection */,
+				504559BB287B031800DA6569 /* TopPicksSection */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		50F472A4287B20CA00996773 /* RecentlyPlayedSection */ = {
+			isa = PBXGroup;
+			children = (
+				50F472A5287B20EA00996773 /* RecentlyPlayedSection.swift */,
+			);
+			name = RecentlyPlayedSection;
+			sourceTree = "<group>";
+		};
+		50F472A7287B238600996773 /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				50F472A8287B23AF00996773 /* MusicItemBackgroundImageView.swift */,
+				50F472AA287B23D300996773 /* MusicItemContainerView.swift */,
+			);
+			path = CommonComponents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -389,13 +422,16 @@
 				504559B5287AD24200DA6569 /* TopPicksHeaderLogoView.swift in Sources */,
 				50D464A62879D663001D4829 /* RadioView.swift in Sources */,
 				50F472A0287B087400996773 /* TopPicksCenterTextView.swift in Sources */,
+				50F472AB287B23D300996773 /* MusicItemContainerView.swift in Sources */,
 				50D464782879D3E8001D4829 /* Persistence.swift in Sources */,
 				504559C3287B048700DA6569 /* TopPicksTopTrailingLogoView.swift in Sources */,
 				504559C0287B038A00DA6569 /* TopPicksBackgroundImageView.swift in Sources */,
 				504559BA287B02EA00DA6569 /* TopPickTitleView.swift in Sources */,
+				50F472A9287B23AF00996773 /* MusicItemBackgroundImageView.swift in Sources */,
 				50D464712879D3E7001D4829 /* MainView.swift in Sources */,
 				50D464A82879D683001D4829 /* LibraryView.swift in Sources */,
 				50F472A2287B09DC00996773 /* TopPicksSection.swift in Sources */,
+				50F472A6287B20EA00996773 /* RecentlyPlayedSection.swift in Sources */,
 				50D4646F2879D3E7001D4829 /* MusicApp.swift in Sources */,
 				504559B3287AA9B800DA6569 /* TopPicksViewModel.swift in Sources */,
 				50F4729E287B081700996773 /* TopPickSubtitleView.swift in Sources */,
@@ -565,11 +601,13 @@
 				DEVELOPMENT_TEAM = TJ2C3F25SU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,11 +633,13 @@
 				DEVELOPMENT_TEAM = TJ2C3F25SU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
