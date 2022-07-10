@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopPicksTopTrailingLogoView: View {
     var viewModel: TopPicksViewModel.TopPick
+    @State private var isLongPressing = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -27,6 +28,12 @@ struct TopPicksTopTrailingLogoView: View {
                 TopPicksBackgroundImageView(imageUrlString: viewModel.imageUrl)
             }
         }
+        .scaleEffect(isLongPressing ? 0.95 : 1.0)
+        .onLongPressGesture(minimumDuration: .infinity, pressing: { isPressing in
+            withAnimation {
+                isLongPressing = isPressing
+            }
+        }) {}
     }
 }
 
