@@ -1,5 +1,5 @@
 //
-//  TopPicksAppleLogoView.swift
+//  AppleLogoView.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopPicksAppleLogoView: View {
+struct AppleLogoView: View {
     var body: some View {
         Image(systemName: "apple.logo")
             .foregroundColor(Color.white)
@@ -16,8 +16,8 @@ struct TopPicksAppleLogoView: View {
     }
 }
 
-struct TopPicksAppleLogoView_Previews: PreviewProvider {
+struct AppleLogoView_Previews: PreviewProvider {
     static var previews: some View {
-        TopPicksAppleLogoView()
+        AppleLogoView()
     }
 }

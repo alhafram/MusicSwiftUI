@@ -49,14 +49,14 @@ struct ListenNowView: View {
     var body: some View {
         NavigationView {
             List {
-                TopPicksSection(topPicks: viewModel.topPicks)
+                DigestMusicSection(title: "Top Picks", topPicks: viewModel.topPicks)
                 MusicItemSection(type: .recently, title: "Recently Played", recentlyPlayed: viewModel.recentlyPlayed)
                     .padding(.top, 10)
                 MusicItemSection(type: .standart, title: "Lil Nas X Fans Like", recentlyPlayed: viewModel.recentlyPlayed)
                     .padding(.top, 10)
                 MusicItemSection(type: .standart, title: "Stations for You", recentlyPlayed: viewModel.recentlyPlayed)
                     .padding(.top, 10)
-                TopPicksSection(topPicks: viewModel.topPicks)
+                DigestMusicSection(title: "Made for You", topPicks: viewModel.topPicks)
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)

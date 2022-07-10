@@ -1,5 +1,5 @@
 //
-//  TopPicksBackgroundImageView.swift
+//  DigestBackgroundImageView.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopPicksBackgroundImageView: View {
+struct DigestBackgroundImageView: View {
     var imageUrlString: String
     var body: some View {
         AsyncImage(url: URL(string: imageUrlString)) { image in
@@ -22,8 +22,8 @@ struct TopPicksBackgroundImageView: View {
     }
 }
 
-struct TopPicksBackgroundImageView_Previews: PreviewProvider {
+struct DigestBackgroundImageView_Previews: PreviewProvider {
     static var previews: some View {
-        TopPicksBackgroundImageView(imageUrlString: "")
+        DigestBackgroundImageView(imageUrlString: "")
     }
 }

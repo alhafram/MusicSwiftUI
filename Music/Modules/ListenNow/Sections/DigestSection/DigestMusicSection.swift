@@ -1,5 +1,5 @@
 //
-//  TopPicksSection.swift
+//  DigestMusicSection.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct TopPicksSection: View {
+struct DigestMusicSection: View {
+    var title: String
     var topPicks: [TopPicksViewModel.TopPick]
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Top Picks")
+            Text(title)
                 .bold()
                 .font(.title2)
             ScrollView(.horizontal) {
@@ -20,13 +21,13 @@ struct TopPicksSection: View {
                     ForEach(topPicks, id: \.self) { topPick in
                         switch topPick.modelType {
                         case .headerLogoView:
-                            TopPicksHeaderLogoView(viewModel: topPick)
+                            DigestHeaderLogoView(viewModel: topPick)
                         case .plainView:
-                            TopPicksPlainView(viewModel: topPick)
+                            DigestPlainView(viewModel: topPick)
                         case .topTrailingLogoView:
-                            TopPicksTopTrailingLogoView(viewModel: topPick)
+                            DigestMusicSectionTopTrailingLogoView(viewModel: topPick)
                         case .centerTextView:
-                            TopPicksCenterTextView(viewModel: topPick)
+                            DigestCenterTextView(viewModel: topPick)
                         }
                     }
                 }
@@ -36,8 +37,8 @@ struct TopPicksSection: View {
     }
 }
 
-struct TopPicksSection_Previews: PreviewProvider {
+struct DigestMusicSection_Previews: PreviewProvider {
     static var previews: some View {
-        TopPicksSection(topPicks: [])
+        DigestMusicSection(title: "", topPicks: [])
     }
 }

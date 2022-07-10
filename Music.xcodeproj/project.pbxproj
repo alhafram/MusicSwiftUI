@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		504559B3287AA9B800DA6569 /* TopPicksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B2287AA9B800DA6569 /* TopPicksViewModel.swift */; };
-		504559B5287AD24200DA6569 /* TopPicksHeaderLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B4287AD24200DA6569 /* TopPicksHeaderLogoView.swift */; };
-		504559B7287AD34400DA6569 /* TopPicksPlainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B6287AD34400DA6569 /* TopPicksPlainView.swift */; };
-		504559BA287B02EA00DA6569 /* TopPickTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B9287B02EA00DA6569 /* TopPickTitleView.swift */; };
+		504559B5287AD24200DA6569 /* DigestHeaderLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B4287AD24200DA6569 /* DigestHeaderLogoView.swift */; };
+		504559B7287AD34400DA6569 /* DigestPlainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B6287AD34400DA6569 /* DigestPlainView.swift */; };
+		504559BA287B02EA00DA6569 /* DigestTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B9287B02EA00DA6569 /* DigestTitleView.swift */; };
 		504559BE287B033C00DA6569 /* TopPicksAppleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BD287B033C00DA6569 /* TopPicksAppleLogoView.swift */; };
-		504559C0287B038A00DA6569 /* TopPicksBackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BF287B038A00DA6569 /* TopPicksBackgroundImageView.swift */; };
-		504559C3287B048700DA6569 /* TopPicksTopTrailingLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559C2287B048700DA6569 /* TopPicksTopTrailingLogoView.swift */; };
+		504559C0287B038A00DA6569 /* DigestBackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BF287B038A00DA6569 /* DigestBackgroundImageView.swift */; };
+		504559C3287B048700DA6569 /* DigestMusicSectionTopTrailingLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559C2287B048700DA6569 /* DigestMusicSectionTopTrailingLogoView.swift */; };
 		50D4646F2879D3E7001D4829 /* MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4646E2879D3E7001D4829 /* MusicApp.swift */; };
 		50D464712879D3E7001D4829 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464702879D3E7001D4829 /* MainView.swift */; };
 		50D464732879D3E8001D4829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D464722879D3E8001D4829 /* Assets.xcassets */; };
@@ -28,9 +28,9 @@
 		50D464A62879D663001D4829 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A52879D663001D4829 /* RadioView.swift */; };
 		50D464A82879D683001D4829 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A72879D683001D4829 /* LibraryView.swift */; };
 		50D464AA2879D6A1001D4829 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A92879D6A1001D4829 /* SearchView.swift */; };
-		50F4729E287B081700996773 /* TopPickSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4729D287B081700996773 /* TopPickSubtitleView.swift */; };
-		50F472A0287B087400996773 /* TopPicksCenterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4729F287B087400996773 /* TopPicksCenterTextView.swift */; };
-		50F472A2287B09DC00996773 /* TopPicksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472A1287B09DC00996773 /* TopPicksSection.swift */; };
+		50F4729E287B081700996773 /* DigestSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4729D287B081700996773 /* DigestSubtitleView.swift */; };
+		50F472A0287B087400996773 /* DigestCenterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4729F287B087400996773 /* DigestCenterTextView.swift */; };
+		50F472A2287B09DC00996773 /* DigestMusicSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472A1287B09DC00996773 /* DigestMusicSection.swift */; };
 		50F472A6287B20EA00996773 /* MusicItemSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472A5287B20EA00996773 /* MusicItemSection.swift */; };
 		50F472A9287B23AF00996773 /* MusicItemBackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472A8287B23AF00996773 /* MusicItemBackgroundImageView.swift */; };
 		50F472AB287B23D300996773 /* MusicItemContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F472AA287B23D300996773 /* MusicItemContainerView.swift */; };
@@ -55,13 +55,13 @@
 
 /* Begin PBXFileReference section */
 		504559B2287AA9B800DA6569 /* TopPicksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksViewModel.swift; sourceTree = "<group>"; };
-		504559B4287AD24200DA6569 /* TopPicksHeaderLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksHeaderLogoView.swift; sourceTree = "<group>"; };
-		504559B6287AD34400DA6569 /* TopPicksPlainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksPlainView.swift; sourceTree = "<group>"; };
+		504559B4287AD24200DA6569 /* DigestHeaderLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestHeaderLogoView.swift; sourceTree = "<group>"; };
+		504559B6287AD34400DA6569 /* DigestPlainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestPlainView.swift; sourceTree = "<group>"; };
 		504559B8287AE91700DA6569 /* Music.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Music.entitlements; sourceTree = "<group>"; };
-		504559B9287B02EA00DA6569 /* TopPickTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPickTitleView.swift; sourceTree = "<group>"; };
+		504559B9287B02EA00DA6569 /* DigestTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestTitleView.swift; sourceTree = "<group>"; };
 		504559BD287B033C00DA6569 /* TopPicksAppleLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksAppleLogoView.swift; sourceTree = "<group>"; };
-		504559BF287B038A00DA6569 /* TopPicksBackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksBackgroundImageView.swift; sourceTree = "<group>"; };
-		504559C2287B048700DA6569 /* TopPicksTopTrailingLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksTopTrailingLogoView.swift; sourceTree = "<group>"; };
+		504559BF287B038A00DA6569 /* DigestBackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestBackgroundImageView.swift; sourceTree = "<group>"; };
+		504559C2287B048700DA6569 /* DigestMusicSectionTopTrailingLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestMusicSectionTopTrailingLogoView.swift; sourceTree = "<group>"; };
 		50D4646B2879D3E7001D4829 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D4646E2879D3E7001D4829 /* MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicApp.swift; sourceTree = "<group>"; };
 		50D464702879D3E7001D4829 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -80,9 +80,9 @@
 		50D464A52879D663001D4829 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		50D464A72879D683001D4829 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		50D464A92879D6A1001D4829 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		50F4729D287B081700996773 /* TopPickSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPickSubtitleView.swift; sourceTree = "<group>"; };
-		50F4729F287B087400996773 /* TopPicksCenterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksCenterTextView.swift; sourceTree = "<group>"; };
-		50F472A1287B09DC00996773 /* TopPicksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksSection.swift; sourceTree = "<group>"; };
+		50F4729D287B081700996773 /* DigestSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestSubtitleView.swift; sourceTree = "<group>"; };
+		50F4729F287B087400996773 /* DigestCenterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestCenterTextView.swift; sourceTree = "<group>"; };
+		50F472A1287B09DC00996773 /* DigestMusicSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestMusicSection.swift; sourceTree = "<group>"; };
 		50F472A5287B20EA00996773 /* MusicItemSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItemSection.swift; sourceTree = "<group>"; };
 		50F472A8287B23AF00996773 /* MusicItemBackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItemBackgroundImageView.swift; sourceTree = "<group>"; };
 		50F472AA287B23D300996773 /* MusicItemContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicItemContainerView.swift; sourceTree = "<group>"; };
@@ -124,22 +124,14 @@
 			path = ListenNow;
 			sourceTree = "<group>";
 		};
-		504559BB287B031800DA6569 /* TopPicksSection */ = {
-			isa = PBXGroup;
-			children = (
-				504559BC287B032400DA6569 /* TopPicksViews */,
-				50F472A1287B09DC00996773 /* TopPicksSection.swift */,
-			);
-			path = TopPicksSection;
-			sourceTree = "<group>";
-		};
-		504559BC287B032400DA6569 /* TopPicksViews */ = {
+		504559BB287B031800DA6569 /* DigestSection */ = {
 			isa = PBXGroup;
 			children = (
 				504559C4287B04EA00DA6569 /* Containers */,
 				504559C5287B04FF00DA6569 /* Components */,
+				50F472A1287B09DC00996773 /* DigestMusicSection.swift */,
 			);
-			path = TopPicksViews;
+			path = DigestSection;
 			sourceTree = "<group>";
 		};
 		504559C1287B045000DA6569 /* ViewModels */ = {
@@ -153,10 +145,10 @@
 		504559C4287B04EA00DA6569 /* Containers */ = {
 			isa = PBXGroup;
 			children = (
-				504559C2287B048700DA6569 /* TopPicksTopTrailingLogoView.swift */,
-				504559B4287AD24200DA6569 /* TopPicksHeaderLogoView.swift */,
-				504559B6287AD34400DA6569 /* TopPicksPlainView.swift */,
-				50F4729F287B087400996773 /* TopPicksCenterTextView.swift */,
+				504559C2287B048700DA6569 /* DigestMusicSectionTopTrailingLogoView.swift */,
+				504559B4287AD24200DA6569 /* DigestHeaderLogoView.swift */,
+				504559B6287AD34400DA6569 /* DigestPlainView.swift */,
+				50F4729F287B087400996773 /* DigestCenterTextView.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -164,10 +156,9 @@
 		504559C5287B04FF00DA6569 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				504559B9287B02EA00DA6569 /* TopPickTitleView.swift */,
-				50F4729D287B081700996773 /* TopPickSubtitleView.swift */,
-				504559BF287B038A00DA6569 /* TopPicksBackgroundImageView.swift */,
-				504559BD287B033C00DA6569 /* TopPicksAppleLogoView.swift */,
+				504559B9287B02EA00DA6569 /* DigestTitleView.swift */,
+				50F4729D287B081700996773 /* DigestSubtitleView.swift */,
+				504559BF287B038A00DA6569 /* DigestBackgroundImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -264,7 +255,7 @@
 		50F472A3287B20C100996773 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				504559BB287B031800DA6569 /* TopPicksSection */,
+				504559BB287B031800DA6569 /* DigestSection */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -272,6 +263,7 @@
 		50F472A7287B238600996773 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
+				504559BD287B033C00DA6569 /* TopPicksAppleLogoView.swift */,
 				50F472A8287B23AF00996773 /* MusicItemBackgroundImageView.swift */,
 				50F472A5287B20EA00996773 /* MusicItemSection.swift */,
 				50F472AA287B23D300996773 /* MusicItemContainerView.swift */,
@@ -411,23 +403,23 @@
 			files = (
 				50D464A22879D608001D4829 /* ListenNowView.swift in Sources */,
 				50D464AA2879D6A1001D4829 /* SearchView.swift in Sources */,
-				504559B5287AD24200DA6569 /* TopPicksHeaderLogoView.swift in Sources */,
+				504559B5287AD24200DA6569 /* DigestHeaderLogoView.swift in Sources */,
 				50D464A62879D663001D4829 /* RadioView.swift in Sources */,
-				50F472A0287B087400996773 /* TopPicksCenterTextView.swift in Sources */,
+				50F472A0287B087400996773 /* DigestCenterTextView.swift in Sources */,
 				50F472AB287B23D300996773 /* MusicItemContainerView.swift in Sources */,
 				50D464782879D3E8001D4829 /* Persistence.swift in Sources */,
-				504559C3287B048700DA6569 /* TopPicksTopTrailingLogoView.swift in Sources */,
-				504559C0287B038A00DA6569 /* TopPicksBackgroundImageView.swift in Sources */,
-				504559BA287B02EA00DA6569 /* TopPickTitleView.swift in Sources */,
+				504559C3287B048700DA6569 /* DigestMusicSectionTopTrailingLogoView.swift in Sources */,
+				504559C0287B038A00DA6569 /* DigestBackgroundImageView.swift in Sources */,
+				504559BA287B02EA00DA6569 /* DigestTitleView.swift in Sources */,
 				50F472A9287B23AF00996773 /* MusicItemBackgroundImageView.swift in Sources */,
 				50D464712879D3E7001D4829 /* MainView.swift in Sources */,
 				50D464A82879D683001D4829 /* LibraryView.swift in Sources */,
-				50F472A2287B09DC00996773 /* TopPicksSection.swift in Sources */,
+				50F472A2287B09DC00996773 /* DigestMusicSection.swift in Sources */,
 				50F472A6287B20EA00996773 /* MusicItemSection.swift in Sources */,
 				50D4646F2879D3E7001D4829 /* MusicApp.swift in Sources */,
 				504559B3287AA9B800DA6569 /* TopPicksViewModel.swift in Sources */,
-				50F4729E287B081700996773 /* TopPickSubtitleView.swift in Sources */,
-				504559B7287AD34400DA6569 /* TopPicksPlainView.swift in Sources */,
+				50F4729E287B081700996773 /* DigestSubtitleView.swift in Sources */,
+				504559B7287AD34400DA6569 /* DigestPlainView.swift in Sources */,
 				504559BE287B033C00DA6569 /* TopPicksAppleLogoView.swift in Sources */,
 				50D464A42879D623001D4829 /* BrowseView.swift in Sources */,
 				50D4647B2879D3E8001D4829 /* Music.xcdatamodeld in Sources */,

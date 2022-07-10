@@ -1,5 +1,5 @@
 //
-//  TopPickTitleView.swift
+//  DigestTitleView.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopPickTitleView: View {
+struct DigestTitleView: View {
     var title: String
     var body: some View {
         VStack {
@@ -24,8 +24,8 @@ struct TopPickTitleView: View {
     }
 }
 
-struct TopPickTitleView_Previews: PreviewProvider {
+struct DigestTitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TopPickTitleView(title: "")
+        DigestTitleView(title: "")
     }
 }

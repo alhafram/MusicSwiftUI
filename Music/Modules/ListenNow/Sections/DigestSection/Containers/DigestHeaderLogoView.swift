@@ -1,5 +1,5 @@
 //
-//  TopPicksHeaderLogoView.swift
+//  DigestHeaderLogoView.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct TopPicksHeaderLogoView: View {
+struct DigestHeaderLogoView: View {
     var viewModel: TopPicksViewModel.TopPick
     @State private var isLongPressing = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            TopPickSubtitleView(subtitle: viewModel.subtitle)
+            DigestSubtitleView(subtitle: viewModel.subtitle)
             VStack {
                 HStack {
-                    TopPicksAppleLogoView()
+                    AppleLogoView()
                     Spacer()
                 }
                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
@@ -28,11 +28,11 @@ struct TopPicksHeaderLogoView: View {
                 }
                 .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 0))
                 Spacer()
-                TopPickTitleView(title: viewModel.title)
+                DigestTitleView(title: viewModel.title)
             }
             .frame(width: 300, height: 400)
             .background {
-                TopPicksBackgroundImageView(imageUrlString: viewModel.imageUrl)
+                DigestBackgroundImageView(imageUrlString: viewModel.imageUrl)
             }
         }
         .scaleEffect(isLongPressing ? 0.95 : 1.0)
@@ -45,13 +45,13 @@ struct TopPicksHeaderLogoView: View {
 }
 
 
-struct TopPicksHeaderLogoView_Previews: PreviewProvider {
+struct DigestHeaderLogoView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = TopPicksViewModel.TopPick(modelType: .headerLogoView,
                                                   title: "Maribou State, OTR, Cathing Flies, RKCB, Hazey Eyes, Isabel, Utah, TRACE, Moglii, Filous, Harrison Brome",
                                                   subtitle: "Made for You",
                                                   imageUrl: "http://192.168.1.7:8887/madeForYou2.png",
                                                   contentString: "chill \nmix".uppercased())
-        TopPicksHeaderLogoView(viewModel: viewModel)
+        DigestHeaderLogoView(viewModel: viewModel)
     }
 }

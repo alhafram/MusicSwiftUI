@@ -1,5 +1,5 @@
 //
-//  TopPicksCenterTextView.swift
+//  DigestCenterTextView.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct TopPicksCenterTextView: View {
+struct DigestCenterTextView: View {
     var viewModel: TopPicksViewModel.TopPick
     @State private var isLongPressing = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            TopPickSubtitleView(subtitle: viewModel.subtitle)
+            DigestSubtitleView(subtitle: viewModel.subtitle)
             VStack {
                 VStack {
                     Spacer()
@@ -26,11 +26,11 @@ struct TopPicksCenterTextView: View {
                     Spacer()
                 }
                 Spacer()
-                TopPickTitleView(title: viewModel.title)
+                DigestTitleView(title: viewModel.title)
             }
             .frame(width: 300, height: 400)
             .background {
-                TopPicksBackgroundImageView(imageUrlString: viewModel.imageUrl)
+                DigestBackgroundImageView(imageUrlString: viewModel.imageUrl)
             }
         }
         .scaleEffect(isLongPressing ? 0.95 : 1.0)
@@ -42,13 +42,13 @@ struct TopPicksCenterTextView: View {
     }
 }
 
-struct TopPicksCenterTextView_Previews: PreviewProvider {
+struct DigestCenterTextView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = TopPicksViewModel.TopPick(modelType: .centerTextView,
                                                   title: "Frient - Single\nLucky Luke & Gaulling\n2018",
                                                   subtitle: "Made from Lucky Luke",
                                                   imageUrl: "http://192.168.1.7:8887/moreFromLuckyLuke.png",
                                                   contentString: "lucky luke & gaulling friend".uppercased())
-        TopPicksCenterTextView(viewModel: viewModel)
+        DigestCenterTextView(viewModel: viewModel)
     }
 }
