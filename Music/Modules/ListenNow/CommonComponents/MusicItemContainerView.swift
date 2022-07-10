@@ -16,7 +16,7 @@ struct MusicItemView: View {
             VStack {}
             .frame(width: 150, height: 150)
             .background {
-                MusicItemBackgroundImageView(imageUrlString: viewModel.imageUrl)
+                BackgroundImageView(imageUrlString: viewModel.imageUrl, cornerRadius: 12, size: .init(width: 150, height: 150))
             }
             Text(viewModel.title)
                 .font(.system(size: 16))

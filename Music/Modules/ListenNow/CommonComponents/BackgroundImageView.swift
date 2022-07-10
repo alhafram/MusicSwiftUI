@@ -1,5 +1,5 @@
 //
-//  DigestBackgroundImageView.swift
+//  BackgroundImageView.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -7,8 +7,11 @@
 
 import SwiftUI
 
-struct DigestBackgroundImageView: View {
+struct BackgroundImageView: View {
     var imageUrlString: String
+    var cornerRadius: CGFloat = 0.0
+    var size: CGSize
+    
     var body: some View {
         AsyncImage(url: URL(string: imageUrlString)) { image in
             image
@@ -17,13 +20,13 @@ struct DigestBackgroundImageView: View {
         } placeholder: {
             Color.gray
         }
-        .frame(width: 300, height: 400)
-        .cornerRadius(12)
+        .frame(width: size.width, height: size.height)
+        .cornerRadius(cornerRadius)
     }
 }
 
-struct DigestBackgroundImageView_Previews: PreviewProvider {
+struct BackgroundImageView_Previews: PreviewProvider {
     static var previews: some View {
-        DigestBackgroundImageView(imageUrlString: "")
+        BackgroundImageView(imageUrlString: "", size: .zero)
     }
 }

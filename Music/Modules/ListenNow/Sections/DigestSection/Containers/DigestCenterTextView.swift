@@ -30,7 +30,7 @@ struct DigestCenterTextView: View {
             }
             .frame(width: 300, height: 400)
             .background {
-                DigestBackgroundImageView(imageUrlString: viewModel.imageUrl)
+                BackgroundImageView(imageUrlString: viewModel.imageUrl, cornerRadius: 12, size: .init(width: 300, height: 400))
             }
         }
         .scaleEffect(isLongPressing ? 0.95 : 1.0)
