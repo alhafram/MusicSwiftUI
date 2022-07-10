@@ -14,11 +14,10 @@ struct TopPicksBackgroundImageView: View {
             image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 250, height: 300)
         } placeholder: {
             Color.gray
         }
-        .frame(width: 250, height: 300)
+        .frame(width: 300, height: 400)
         .cornerRadius(12)
     }
 }

@@ -17,7 +17,7 @@ struct TopPicksPlainView: View {
                 Spacer()
                 TopPickTitleView(title: viewModel.title)
             }
-            .frame(width: 250, height: 300)
+            .frame(width: 300, height: 400)
             .background {
                 TopPicksBackgroundImageView(imageUrlString: viewModel.imageUrl)
             }

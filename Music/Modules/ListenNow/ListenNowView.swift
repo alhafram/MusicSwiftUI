@@ -13,6 +13,7 @@ struct ListenNowView: View {
             List {
                 TopPicksSection()
             }
+            .listStyle(.plain)
             .navigationTitle("Listen now")
         }
     }
