@@ -1,0 +1,816 @@
+{
+    "sections": [
+        {
+            "sectionHeader": "Top Picks",
+            "type": "big",
+            "items": [
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features124/v4/7b/1d/f0/7b1df048-0017-8ac0-98c9-735f14849606/mza_7507996640781423701.png/300x300cc.webp",
+                    "title": "Made for You",
+                    "details": "Albert’s Station",
+                    "footerUrl": "https://is5-ssl.mzstatic.com/image/thumb/Features124/v4/7b/1d/f0/7b1df048-0017-8ac0-98c9-735f14849606/mza_7507996640781423701.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/53/3e/99/533e99b4-06c3-0926-9e70-0622a4afdf86/contsched.yfnfmlqk.png/300x300SC.DN01.webp?l=en-GB",
+                    "title": "Dance Moves",
+                    "details": "Dance/EDM Replay\nA select mix of recent dance/EDM hits.",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/53/3e/99/533e99b4-06c3-0926-9e70-0622a4afdf86/contsched.yfnfmlqk.png/44x44br-60.jpg?l=en-GB"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/0f/8e/59/0f8e59ca-bbab-e9e6-6ca2-5d75a84fe714/859763525998_cover.jpg/300x300cc.webp",
+                    "title": "New Release",
+                    "details": "What You Gonna Be - EP \nNEFFEX\n2022",
+                    "footerUrl": "https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/0f/8e/59/0f8e59ca-bbab-e9e6-6ca2-5d75a84fe714/859763525998_cover.jpg/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/48/0d/d4/480dd4bf-1da8-7a2d-d46e-e30033593733/886447422434.jpg/300x300cc.webp",
+                    "title": "More from LIZOT",
+                    "details": "Corvette - Single\nLIZOT\n2018",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/48/0d/d4/480dd4bf-1da8-7a2d-d46e-e30033593733/886447422434.jpg/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Video114/v4/ce/29/03/ce29031d-112d-f099-c1ef-4550e65871c6/Jobcfe7d6fb-b86e-49f3-851f-20bb5d99b8a6-107559482-PreviewImage_preview_image_nonvideo_sdr-Time1601338643510.png/300x300cc.webp",
+                    "title": "Made for You",
+                    "details": "Shawn Mendes, Maroon 5, Mako, Calvin Harris, Rudimental, Shallou, OTR, Yppah, Catching Flies, RKCB, Бабек Мамедрзаев, RASA",
+                    "footerUrl": "https://is3-ssl.mzstatic.com/image/thumb/Video114/v4/ce/29/03/ce29031d-112d-f099-c1ef-4550e65871c6/Jobcfe7d6fb-b86e-49f3-851f-20bb5d99b8a6-107559482-PreviewImage_preview_image_nonvideo_sdr-Time1601338643510.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/ad/21/ea/ad21ea60-ed1f-5c71-fa1a-2fb5b3916c06/cover.jpg/300x300cc.webp",
+                    "title": "Meet Your Goals",
+                    "details": "Vinyl #1\nZivert\n2019",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/ad/21/ea/ad21ea60-ed1f-5c71-fa1a-2fb5b3916c06/cover.jpg/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features124/v4/62/79/00/627900ca-cc83-f9d3-e6e6-cb045d43ef59/mzl.zoacxoat.jpg/300x300AM.RSMA01.webp?imgLeftAlbum=Music116%2Fv4%2Fce%2F9a%2Fca%2Fce9aca47-8bc2-4193-a0b6-fa888816dab4%2F5056495377795_1.jpg&imgRight=Features115%2Fv4%2Fb0%2F3a%2F97%2Fb03a97b4-5ec8-2604-61eb-4e7c0a713efe%2Fmzl.zjukqvcu.jpg",
+                    "title": "Featuring Real girl",
+                    "details": "Real girl & Similar Artists",
+                    "footerUrl": "https://is5-ssl.mzstatic.com/image/thumb/Features124/v4/62/79/00/627900ca-cc83-f9d3-e6e6-cb045d43ef59/mzl.zoacxoat.jpg/44x44br-60.jpg?imgLeftAlbum=Music116%2Fv4%2Fce%2F9a%2Fca%2Fce9aca47-8bc2-4193-a0b6-fa888816dab4%2F5056495377795_1.jpg&imgRight=Features115%2Fv4%2Fb0%2F3a%2F97%2Fb03a97b4-5ec8-2604-61eb-4e7c0a713efe%2Fmzl.zjukqvcu.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/6d/56/3f/6d563f5e-39a1-45f9-4283-3de5a2e7135f/cover.jpg/300x300cc.webp",
+                    "title": "Romantic Moods",
+                    "details": "Новый рассвет\nANIVAR\n2020",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/6d/56/3f/6d563f5e-39a1-45f9-4283-3de5a2e7135f/cover.jpg/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/ae/58/e4/ae58e400-5988-f48f-7047-b59576b0216b/artwork.jpg/300x300cc.webp",
+                    "title": "New Release",
+                    "details": "Walking - Single\nLiQWYD\n2022",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/ae/58/e4/ae58e400-5988-f48f-7047-b59576b0216b/artwork.jpg/44x44br-60.jpg"
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Recently Played",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features124/v4/7b/1d/f0/7b1df048-0017-8ac0-98c9-735f14849606/mza_7507996640781423701.png/514x514cc.webp",
+                    "title": "Albert’s Station",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/81/8c/d6/818cd69c-cbb4-8ba9-0865-5655f6a4b51e/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music112%2Fv4%2F62%2Fad%2F08%2F62ad085e-2fcd-dcc3-640a-0256ceaedcf3%2Fpr_source.png&imgRight=Features115%2Fv4%2F16%2F99%2F83%2F16998367-6223-78be-99f5-9117eef8e2b2%2Fmzl.miboevtx.jpg",
+                    "title": "GUMA & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features125/v4/07/89/a3/0789a358-0ee5-6f13-8a54-8dc1a113066a/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music115%2Fv4%2Fd7%2Fa7%2F37%2Fd7a73703-ee4b-29b7-8f22-64d7b88a31b6%2Fpr_source.png&imgRight=Music116%2Fv4%2Fab%2F4a%2F5f%2Fab4a5fe1-773b-5dd7-2545-3f14caae58e5%2Fpr_source.png",
+                    "title": "Lil Nas X & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music116/v4/c4/8f/ca/c48fca65-47a8-85ff-eb8d-c23898f746b9/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music116%2Fv4%2Fe6%2Ffa%2F62%2Fe6fa62a1-48c9-aa08-0b28-0bac5e165a11%2Fpr_source.png&imgRight=Music112%2Fv4%2F8f%2Feb%2Fc1%2F8febc1e6-b5e1-aa58-1666-93e7d664f0e8%2Fpr_source.png",
+                    "title": "LIZOT & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/2c/75/9c/2c759c8f-9cea-40cd-b683-1dc4335d147b/190295514983.jpg/486x486bb.webp",
+                    "title": "WTF (feat. Amber Van Day) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Features116/v4/57/83/4c/57834cd5-7b9c-176d-e37f-ebfaa413efc6/U0MtTVMtUlVTLUNoaWxsLUFEQU1fSUQ9OTg1NDg0OTQzLnBuZw.png/514x514cc.webp",
+                    "title": "Chill Station",
+                    "subtitle": "Apple Music Chill"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music126/v4/d9/fc/65/d9fc65a2-fc23-2c5e-eff4-2deddeae9ee0/8445490511766_Cover.jpg/486x486bb.webp",
+                    "title": "Kosandra - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/a5/06/ae/a506ae89-bd93-6164-e4e2-43b8b2439d27/0.jpg/486x486bb.webp",
+                    "title": "хватит грустить - Single",
+                    "subtitle": "Real girl"
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music116/v4/20/1d/5d/201d5dd8-f170-5d03-1b01-c2e4f925eb6a/cover.jpg/486x486bb.webp",
+                    "title": "Kosandra - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/09/d6/5a/09d65a7f-4ce6-e435-0547-5076a38ad285/190296515019.jpg/486x486bb.webp",
+                    "title": "Стеклянная - Single",
+                    "subtitle": "GUMA"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features126/v4/75/27/77/752777ab-67c8-d0be-f460-9e9cea69887a/d1245728-1963-42c9-bfae-50ac87a83aee.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Today’s Hits",
+                    "subtitle": "Apple Music Hits"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/7d/be/7c/7dbe7cf9-7f98-c554-0a4c-6f282a5eb07b/886447369142.jpg/486x486bb.webp",
+                    "title": "Get You the Moon (feat. Snøw) - Single",
+                    "subtitle": "Kina"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/47/11/a2/4711a260-0289-2764-ffe2-e43427fa0b88/8720766449982.png/486x486bb.webp",
+                    "title": "ЛЬВИЦА - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/d7/bb/e4/d7bbe4ea-5f0f-4590-25cb-47e12231d76c/886447519509.jpg/486x486bb.webp",
+                    "title": "Cooler Than Me - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/4f/fe/47/4ffe4783-0fca-6032-0f26-a7e3eef2e73a/0617465525759.png/514x514AM.RSSB01.webp",
+                    "title": "Run for Your Life (feat. Natalola) Station",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/f7/43/4e/f7434e42-4e9e-4b62-1584-8c441936908c/858275040869.jpg/486x486bb.webp",
+                    "title": "Used To It (Stripped) - Single",
+                    "subtitle": "Ashe"
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Electronic",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/57/cf/b3/57cfb3cf-52bc-2f59-c3e2-66ad2b654ebc/196292072549.jpg/514x514cc.webp",
+                    "title": "Electric Feel - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/c5/5f/3a/c55f3a25-80da-ab7d-6743-cbb5eff3b169/cover.jpg/514x514cc.webp",
+                    "title": "Someone’s EP I",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/43/ed/c7/43edc7eb-9f1a-2119-43e9-377eb87a2c9e/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Shallou Essentials",
+                    "subtitle": "Apple Music"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/31/70/82/31708251-7c8c-12d1-43f0-9b36728291de/dj.hlbmgpxu.jpg/514x514cc.webp",
+                    "title": "Lights",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/21/c9/cc/21c9cca6-2d32-d31a-30b6-a1023be086f6/0617465834752.png/514x514cc.webp",
+                    "title": "Spleen - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/9c/54/8d/9c548daf-dae7-808d-24c5-a17400f04348/886446535579.jpg/514x514cc.webp",
+                    "title": "For You - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music71/v4/f4/b6/23/f4b623ea-0fb0-44e1-7dcd-6b52019ba96d/190295876234.jpg/514x514cc.webp",
+                    "title": "Vines (Feat. Woodes) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music71/v4/1b/8e/c7/1b8ec732-739a-c339-15d0-b0c6e3172a44/0617465829352.png/514x514cc.webp",
+                    "title": "All We've Known - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features125/v4/20/92/78/209278cb-3b15-faa6-dc5c-0d1711636b14/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Petit Biscuit Essentials",
+                    "subtitle": "Apple Music Electronic"
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/99/4e/15/994e1578-11c4-bca8-e4fd-967feb4ea872/075679890887.jpg/514x514cc.webp",
+                    "title": "Breathe Remixes - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/42/31/30/42313055-e2ee-3c23-1725-3da5933d4b14/425132261165_cover.jpg/514x514cc.webp",
+                    "title": "Naboo",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music30/v4/af/ce/5c/afce5c6f-06bd-9ca5-f982-07080c80a83b/SWEATDS213.jpg/514x514cc.webp",
+                    "title": "Mercury (The Remixes) - EP",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Lil Nas X Fans Like",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Features115/v4/4b/43/48/4b4348db-0f08-6706-3a66-777100fa0312/UFZTLU1TLVdXLUJpbGxpZS5wbmc.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Billie Eilish Essentials",
+                    "subtitle": "Apple Music Pop"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/e8/eb/cc/e8ebcc8d-6293-6e7f-7cc5-defa2bdbd4bd/886449399895.jpg/514x514cc.webp",
+                    "title": "STAY - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/0a/44/d6/0a44d6f1-c68d-247d-6d5d-c78835d16743/mzl.nmecxdtb.jpeg/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Post Malone Essentials",
+                    "subtitle": "Apple Music Hip Hop/Rap"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/94/74/1e/94741ee9-bb3c-4c9f-da27-e04d9878faae/075679797032.jpg/514x514cc.webp",
+                    "title": "Heaven & Hell",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music125/v4/c2/7f/08/c27f0854-b5ab-67f5-50af-e9a7843a8060/886447991824.jpg/514x514cc.webp",
+                    "title": "Hot Pink",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Features115/v4/42/04/ae/4204ae87-e800-6b47-d95c-068e3bd52995/mzl.gwhtpegi.jpg/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Juice WRLD Essentials",
+                    "subtitle": "Apple Music Hip Hop/Rap"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/ce/63/06/ce6306bb-5830-af8f-8ebd-4eb7d3c14e1e/21UMGIM26092.rgb.jpg/514x514cc.webp",
+                    "title": "SOUR (Video Version)",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/fd/c9/39/fdc939c4-b6f3-6b69-1ec3-15f538793723/cover.jpg/514x514cc.webp",
+                    "title": "Marshmello Fortnite Extended Set (DJ Mix)",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/83/eb/59/83eb59d9-629d-5f60-7a6b-a2cb0b70ebd1/075679793102.jpg/514x514cc.webp",
+                    "title": "Astronaut In The Ocean - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/79/9f/47/799f47b9-7bb9-c770-d390-63bb5c0a3ba6/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Megan Thee Stallion Essentials",
+                    "subtitle": "Apple Music Hip Hop/Rap"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music126/v4/25/8e/1a/258e1a77-61f9-c817-0fbb-ac0a90da77a4/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "DaBaby Essentials",
+                    "subtitle": "Apple Music Hip Hop/Rap"
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/de/49/ec/de49ec3f-5567-7e69-3e65-3aa6a827c42d/054391919809.jpg/514x514cc.webp",
+                    "title": "INFERNO - Single",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Made for You",
+            "type": "big",
+            "items": [
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Video114/v4/ce/29/03/ce29031d-112d-f099-c1ef-4550e65871c6/Jobcfe7d6fb-b86e-49f3-851f-20bb5d99b8a6-107559482-PreviewImage_preview_image_nonvideo_sdr-Time1601338643510.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Shawn Mendes, Maroon 5, Mako, Calvin Harris, Rudimental, Shallou, OTR, Yppah, Catching Flies, RKCB, Бабек Мамедрзаев, RASA",
+                    "footerUrl": "https://is3-ssl.mzstatic.com/image/thumb/Video114/v4/ce/29/03/ce29031d-112d-f099-c1ef-4550e65871c6/Jobcfe7d6fb-b86e-49f3-851f-20bb5d99b8a6-107559482-PreviewImage_preview_image_nonvideo_sdr-Time1601338643510.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Video124/v4/48/97/9d/48979da3-59bd-395f-dc16-886e874f1fb6/Job28cc60e1-03f4-4a27-8f92-a83335bbeb34-107559151-PreviewImage_preview_image_nonvideo_sdr-Time1601334227455.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Zara Larsson, Jax Jones, Clean Bandit, Basixx, Maff Boothroyd, MOTi, Aiyo, Loris Cimino, Lvly, Kygo, Mondays, Marshmello",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Video124/v4/48/97/9d/48979da3-59bd-395f-dc16-886e874f1fb6/Job28cc60e1-03f4-4a27-8f92-a83335bbeb34-107559151-PreviewImage_preview_image_nonvideo_sdr-Time1601334227455.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Video114/v4/18/d3/b1/18d3b126-0a91-b112-e2fd-e8b6dcb9c238/Jobdefb94c2-6e80-4206-a226-29765632d1af-107559236-PreviewImage_preview_image_nonvideo_sdr-Time1601334010442.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Maribou State, OTR, Catching Flies, RKCB, Hazey Eyes, Isabel, Utah, TRACE, Pascäal, Moglii, Filous, Harrison Brome",
+                    "footerUrl": "https://is5-ssl.mzstatic.com/image/thumb/Video114/v4/18/d3/b1/18d3b126-0a91-b112-e2fd-e8b6dcb9c238/Jobdefb94c2-6e80-4206-a226-29765632d1af-107559236-PreviewImage_preview_image_nonvideo_sdr-Time1601334010442.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/48/ab/91/48ab91be-9749-3fef-4e7e-5c4b4cc518ae/Jobe1cdcb32-b7f3-43c2-b614-19d75392ce1c-107544037-PreviewImage_preview_image_nonvideo_sdr-Time1601075070432.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Loud Luxury, yeanix, Martin Garrix, Minelli, Асия, GUMA, Tanir & Tyomcha, Тайпан, NEFFEX, ANIVAR, Zivert, Besomorph",
+                    "footerUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video114/v4/48/ab/91/48ab91be-9749-3fef-4e7e-5c4b4cc518ae/Jobe1cdcb32-b7f3-43c2-b614-19d75392ce1c-107544037-PreviewImage_preview_image_nonvideo_sdr-Time1601075070432.png/44x44br-60.jpg"
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Stations for You",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features124/v4/7b/1d/f0/7b1df048-0017-8ac0-98c9-735f14849606/mza_7507996640781423701.png/514x514cc.webp",
+                    "title": "Albert’s Station",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features124/v4/62/79/00/627900ca-cc83-f9d3-e6e6-cb045d43ef59/mzl.zoacxoat.jpg/514x514AM.RSMA01.webp?imgLeftAlbum=Music116%2Fv4%2Fce%2F9a%2Fca%2Fce9aca47-8bc2-4193-a0b6-fa888816dab4%2F5056495377795_1.jpg&imgRight=Features115%2Fv4%2Fb0%2F3a%2F97%2Fb03a97b4-5ec8-2604-61eb-4e7c0a713efe%2Fmzl.zjukqvcu.jpg",
+                    "title": "Real girl & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/51/7c/2a/517c2aa5-67a5-5e9a-2d75-e1c989915c7f/pr_source.png/514x514AM.RSMA01.webp?imgLeftAlbum=Music125%2Fv4%2F75%2F06%2Fa1%2F7506a1e3-a035-78f1-b6cf-743db68fd268%2F7330178024564.png&imgRight=Features125%2Fv4%2F88%2F83%2F7d%2F88837d9e-c105-d260-1700-2106d89ce362%2Fpr_source.png",
+                    "title": "Lvly & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features115/v4/61/83/68/6183683a-76ee-a85d-6d53-d0a62eae5c56/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music126%2Fv4%2F12%2F1a%2F2c%2F121a2c1c-a0f8-669e-6698-a0d76560a924%2Fpr_source.png&imgRight=Music125%2Fv4%2F0e%2Fbf%2F1d%2F0ebf1db0-eebb-2ebc-82aa-783b523471a5%2Fpr_source.png",
+                    "title": "Lucky Luke & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ac/76/88/ac76881b-e202-b22c-8462-6c71ced0eef8/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Features125%2Fv4%2Fbf%2F85%2Fd9%2Fbf85d938-1041-19f6-0e22-add9113fa2c5%2Fpr_source.png&imgRight=Music116%2Fv4%2Fe6%2Ffa%2F62%2Fe6fa62a1-48c9-aa08-0b28-0bac5e165a11%2Fpr_source.png",
+                    "title": "LUM!X & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music122/v4/a4/e2/0f/a4e20f0c-9db4-994f-356a-7fb5d21dd3ae/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music116%2Fv4%2F2c%2F2b%2Fb2%2F2c2bb2c4-c25a-f432-ca6b-2b2a39ce7e24%2Fpr_source.png&imgRight=Music126%2Fv4%2F46%2F6c%2F79%2F466c7909-5a03-a2b3-b942-1d8feaa10822%2Fpr_source.png",
+                    "title": "Loud Luxury & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music116/v4/c4/8f/ca/c48fca65-47a8-85ff-eb8d-c23898f746b9/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music116%2Fv4%2Fe6%2Ffa%2F62%2Fe6fa62a1-48c9-aa08-0b28-0bac5e165a11%2Fpr_source.png&imgRight=Music112%2Fv4%2F8f%2Feb%2Fc1%2F8febc1e6-b5e1-aa58-1666-93e7d664f0e8%2Fpr_source.png",
+                    "title": "LIZOT & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features125/v4/07/89/a3/0789a358-0ee5-6f13-8a54-8dc1a113066a/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music115%2Fv4%2Fd7%2Fa7%2F37%2Fd7a73703-ee4b-29b7-8f22-64d7b88a31b6%2Fpr_source.png&imgRight=Music116%2Fv4%2Fab%2F4a%2F5f%2Fab4a5fe1-773b-5dd7-2545-3f14caae58e5%2Fpr_source.png",
+                    "title": "Lil Nas X & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features115/v4/33/82/9e/33829e57-14c4-32ab-cb0b-ff143d4991e5/mzl.zadxrlzm.jpg/514x514AM.RSMA01.webp?imgLeft=Features114%2Fv4%2F46%2F00%2Ffd%2F4600fde6-407d-7898-ca75-853dbb059220%2Fpr_source.png&imgRight=Features125%2Fv4%2F58%2F7f%2F5f%2F587f5ff3-a2c7-5652-10a6-d8b359b89da0%2Fmzl.gtggpelu.jpg",
+                    "title": "Miyagi & Andy Panda & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/81/8c/d6/818cd69c-cbb4-8ba9-0865-5655f6a4b51e/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music112%2Fv4%2F62%2Fad%2F08%2F62ad085e-2fcd-dcc3-640a-0256ceaedcf3%2Fpr_source.png&imgRight=Features115%2Fv4%2F16%2F99%2F83%2F16998367-6223-78be-99f5-9117eef8e2b2%2Fmzl.miboevtx.jpg",
+                    "title": "GUMA & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features115/v4/6f/0f/96/6f0f9635-b039-b008-3340-52e9a100b1b4/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Music115%2Fv4%2F5a%2F60%2F84%2F5a60849d-4fcd-13a6-0715-4621186bab23%2Fpr_source.png&imgRight=Music116%2Fv4%2F32%2F95%2Fa2%2F3295a290-e68c-528d-8319-ac392e34695a%2Fpr_source.png",
+                    "title": "Lukas Graham & Similar Artists",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/de/eb/9f/deeb9f41-faea-17d0-15bf-45946198ecb1/pr_source.png/514x514AM.RSMA01.webp?imgLeft=Features124%2Fv4%2Fc9%2F98%2F90%2Fc998909c-55a3-ad53-e15a-a90763297648%2Fpr_source.png&imgRight=Music116%2Fv4%2Ff8%2Fa8%2Feb%2Ff8a8ebba-48f5-1826-0434-326aafcce29a%2Fpr_source.png",
+                    "title": "Oxxxymiron & Similar Artists",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Chill",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/be/6f/14/be6f14eb-512f-1abd-882d-0244a6b3fbb3/7330178044937.png/514x514cc.webp",
+                    "title": "Getting Nowhere - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/f5/e8/85/f5e885df-cd31-ef99-b679-d6124e27108a/5054526491038_1.jpg/514x514cc.webp",
+                    "title": "Nomad",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/c0/0f/8a/c00f8af2-6c9b-fe91-50fe-d66bedb1ef28/067003423359.png/514x514cc.webp",
+                    "title": "Fill Your Brains - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features125/v4/99/73/14/997314ac-e174-19e6-ac6e-9832b56faf3c/U0MtTVMtUlVTLVNlcmVuaXR5LUFEQU1fSUQ9MTU3NTkwMjYyMC5wbmc.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Serenity",
+                    "subtitle": "Apple Music"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/3f/5b/29/3f5b2941-486f-4afb-74a8-99d209de8419/859714073837_Cover.jpg/514x514cc.webp",
+                    "title": "Tunnels & Planes - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/c6/52/42/c652423d-d802-e17c-7de9-57c05d1aea0c/7330178044647.png/514x514cc.webp",
+                    "title": "High Hopes - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/95/95/9f/95959fa1-9c14-69e0-be13-4ab54f5f0907/5054526650916_1.jpg/514x514cc.webp",
+                    "title": "It's Alright / Save Me - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music126/v4/d4/ee/eb/d4eeeb6b-5089-d7fa-27d9-37ea76ee64e5/067003109260.png/514x514cc.webp",
+                    "title": "Grow - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/67/d7/77/67d777b1-cb40-00a2-448e-2e915075e365/7330178041011.png/514x514cc.webp",
+                    "title": "Lighthouse - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/58/36/61/583661fd-de4e-3716-b84b-5371048f8c50/5063112557430_cover.jpg/514x514cc.webp",
+                    "title": "Eyes Blue Or Brown, Can't Remember (Sped Up) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/ff/4d/3f/ff4d3f99-0fb8-dd2a-2a68-4125325d79b4/859721892582_cover.jpg/514x514cc.webp",
+                    "title": "Childish (Remixes) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/40/de/d3/40ded396-0e53-4960-8df3-5156bf71805d/5053760033646.png/514x514cc.webp",
+                    "title": "A Telling End - EP",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "New Releases",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/0f/8e/59/0f8e59ca-bbab-e9e6-6ca2-5d75a84fe714/859763525998_cover.jpg/486x486bb.webp",
+                    "title": "What You Gonna Be - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/ae/58/e4/ae58e400-5988-f48f-7047-b59576b0216b/artwork.jpg/486x486bb.webp",
+                    "title": "Walking - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/14/f2/ee/14f2ee5b-e82e-7f33-1e7a-833d2b1ee5f3/cover.jpg/486x486bb.webp",
+                    "title": "Михаил - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/ef/ba/ff/efbaff85-eed9-dad2-4580-d72a1511e58b/8718522379017.png/486x486bb.webp",
+                    "title": "These Nights (feat. KIDDO) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/54/52/bb/5452bbb9-5040-7aad-6a4d-e7183bb039f8/cover.jpg/486x486bb.webp",
+                    "title": "Шёпот далёких звёзд - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/4d/ca/02/4dca0296-b5e8-4490-546a-5489d88c45f4/859763269663_cover.jpg/486x486bb.webp",
+                    "title": "They Call Me a God - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/17/c8/87/17c887f0-211b-05f2-9f69-5859772b4e9d/730530609458_cover.jpg/486x486bb.webp",
+                    "title": "So Low - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/de/27/81/de27819b-f2aa-08d2-3c55-be4254c3df49/cover.jpg/486x486bb.webp",
+                    "title": "911 - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/34/17/88/34178813-f737-e86b-2930-9a5b239764c1/artwork.jpg/486x486bb.webp",
+                    "title": "Shiny Day - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/3a/2f/f2/3a2ff2b4-2198-8ea1-e111-d1f98c52f6d8/cover.jpg/486x486bb.webp",
+                    "title": "Бандана - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/95/3c/23/953c23f1-c454-4ef8-e8a5-72c70fc14162/752470291159_cover.jpg/486x486bb.webp",
+                    "title": "Trapped - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music112/v4/88/4c/31/884c3197-43f6-5348-c146-1ca3ed529157/5057272883843.png/486x486bb.webp",
+                    "title": "The Road I'm On - Single",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "More from LIZOT",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/22/12/ba/2212baa7-1361-b6dd-d93d-9af1419d0e2c/886448825456.jpg/486x486bb.webp",
+                    "title": "Extended Mixes",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/48/0d/d4/480dd4bf-1da8-7a2d-d46e-e30033593733/886447422434.jpg/486x486bb.webp",
+                    "title": "Corvette - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/0a/44/67/0a446780-401e-6167-2ed3-776414d03380/886447508107.jpg/486x486bb.webp",
+                    "title": "Corvette (Vion Konger Remix) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/d7/26/54/d72654f2-7ef9-d3d8-c0a6-38330cacf9d7/886447974087.jpg/486x486bb.webp",
+                    "title": "Don't Forget (Blaikz Remix) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/d3/c5/45/d3c54547-9b1b-81e8-0942-848047cc3c5f/886448431176.jpg/486x486bb.webp",
+                    "title": "Back To Her - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/7a/a7/8b/7aa78b96-6587-e9ea-f666-efa103ad3124/886447523537.jpg/486x486bb.webp",
+                    "title": "Waking up Alive (Club Mixes) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/c3/a5/5c/c3a55c69-9ee9-9112-fe01-29f0da0cab1e/886449270835.jpg/486x486bb.webp",
+                    "title": "Sing It Back Again - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music128/v4/f1/4d/dd/f14ddd66-66ba-9097-17bf-0d369be9b0a8/886446994307.jpg/486x486bb.webp",
+                    "title": "Hide Another You (feat. Filip Martin) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/86/2e/a8/862ea8ea-3ed3-bf3c-da95-c6f9580421bc/886448205050.jpg/486x486bb.webp",
+                    "title": "Menage A Trois (Coustan Remix) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/e5/3c/a6/e53ca629-8c12-9cf2-1cc5-a97e7284fa34/886446349992.jpg/486x486bb.webp",
+                    "title": "Regensturm - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/86/32/fb/8632fb0b-8319-8dd0-12fc-9934c1178a03/886448163893.jpg/486x486bb.webp",
+                    "title": "Menage a Trois - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music126/v4/56/6f/88/566f88fc-04db-8937-07e9-cd1cf5660fba/886449733774.jpg/486x486bb.webp",
+                    "title": "Daddy Cool - Single",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Dance Moves",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/53/3e/99/533e99b4-06c3-0926-9e70-0622a4afdf86/contsched.yfnfmlqk.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Dance/EDM Replay",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/d7/af/f1/d7aff16d-c5db-0820-cec6-619473be7f84/U0NHT09EIFZJQkVTTkwucG5n.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Good Vibes Only",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features114/v4/02/2f/d5/022fd5f6-2c1c-accd-bc61-62905bdff37c/U0MtTVMtV1ctQmVzdG9mMjAyMF9UMS1EYW5jZV9YTC1BREFNX0lEPTE1NDA4MDY2NDkucG5n.png/514x514cc.webp",
+                    "title": "danceXL 2020",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features115/v4/91/c1/96/91c196b3-876d-35a0-80fb-1b559ecbd9a6/U0MtTVMtV1ctU3VtbWVyX1ZpYmVzLWR5bmFtaWNzLUFkYW1fSUQ9IDk3NjQ0OTIwMy5wbmc.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Summer Vibes",
+                    "subtitle": "Apple Music Summertime Sounds"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/44/77/ef/4477ef68-3e6c-e345-acca-c2c5faef9db5/U0MtTVMtUlVTLV8xMHNfQ2x1Yl9IaXRzX0Vzc2VudGlhbHMtQURBTV9JRD0xMzI1MzQxODE0LnBuZw.png/514x514SC.CAHGOY01.webp?l=en-GB",
+                    "title": "2010s Club Hits Essentials",
+                    "subtitle": "Apple Music 2010s"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/dd/98/64/dd986477-408e-91e4-5513-24fcc531054b/U0MtTVMtV1ctZGFuY2VYTF8yMDE5LUFEQU1fSUQ9MTQ5MDMzMTgzNS5wbmc.png/514x514SC.CAHGOY01.webp?l=en-GB",
+                    "title": "danceXL 2019",
+                    "subtitle": "Apple Music Dance"
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Pop",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/e4/f3/23/e4f323a7-29fd-a429-4dc9-dbdd5c5e5b6a/mzm.nzvdusow.jpg/514x514cc.webp",
+                    "title": "Firestone (feat. Conrad Sewell) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/60/cd/12/60cd12ae-fff6-d80d-b905-6c908a6d915e/21UMGIM15344.rgb.jpg/514x514cc.webp",
+                    "title": "Heat Waves - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Features125/v4/d9/e9/03/d9e903cb-5a9c-2d26-83b8-d56e9a8c3487/U0MtTVMtUlVTLVZpcnR1YWxfSHVncy1BREFNX0lEPTE1MDM1NzA2NTAucG5n.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Virtual Hugs",
+                    "subtitle": "Apple Music Pop"
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Features125/v4/ed/2b/66/ed2b6697-02fc-0a39-36ca-949fa2ca82ea/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Alan Walker Essentials",
+                    "subtitle": "Apple Music"
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music116/v4/87/95/10/87951096-b896-718a-4996-a17184d20ed0/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Leony Essentials",
+                    "subtitle": "Apple Music Pop"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/24/11/0f/24110fbe-12c4-f584-a46e-267eaaf40914/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "HRVY Essentials",
+                    "subtitle": "Apple Music Pop"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features115/v4/aa/66/a5/aa66a51e-be32-cea8-aedf-0b2cc4f5003b/U0MtTVMtV1ctU2hhemFtX1N0YXJzLUFEQU1fSUQ9MTQ5NzUxMzkxMC5wbmc.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Shazam Stars",
+                    "subtitle": "Apple Music"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features115/v4/b6/e5/0b/b6e50bee-2cae-fca4-ce58-b87e04fdecf4/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Galantis Essentials",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/97/61/e4/9761e411-fdbe-6db1-1f84-db91b024f0d2/21UMGIM80549.rgb.jpg/514x514cc.webp",
+                    "title": "Take My Breath (Single Package) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/a9/d0/c1/a9d0c167-04da-96bc-891a-0fe2fccd3648/20UM1IM17866.rgb.jpg/514x514cc.webp",
+                    "title": "Safe With Me (Acoustic) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/97/0b/a6/970ba610-954a-ac43-f97a-9ac9eab05e79/21UMGIM16156.rgb.jpg/514x514cc.webp",
+                    "title": "Small Town Boy In A Big Arcade - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/65/5f/24/655f249a-162f-7d6b-fc09-53bcdde7ff60/22UMGIM10831.rgb.jpg/514x514cc.webp",
+                    "title": "Do It To It (Tiësto Remix) [feat. Cherish & Tiësto] - Single",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Dance",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music1/v4/3f/8b/6e/3f8b6e3e-36a0-81d5-bfa5-b97351b10c9c/dj.rrlkuxxx.jpg/514x514cc.webp",
+                    "title": "Dangerous (feat. Sam Martin) [Remixes EP]",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features115/v4/06/4c/9f/064c9fff-e7b1-27c9-f844-a77011367792/U0MtTVMtV1ctRmVzdGl2YWxfQmFuZ2Vycy1BREFNX0lEPTExMjQ1NDEwODcucG5n.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Festival Bangers",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Features115/v4/23/18/db/2318dbf4-6693-88f6-4c36-e483bf5122ba/U0MtTVMtV1ctRGFuY2VfUG9wX0hpdHMtQURBTV9JRD0xNDU5MTY2NDgyLnBuZw.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Dance Pop Hits",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music62/v4/dd/dc/8f/dddc8f46-a8e5-c405-d7cd-3259adb775e8/mzm.ipgruzeb.jpg/514x514cc.webp",
+                    "title": "Smoke Filled Room (Remixes) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features115/v4/ae/52/04/ae5204b6-337d-f34c-2200-5d7f61b7c52e/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Martin Garrix Essentials",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/50/16/cb/5016cbb8-ccde-0763-7fee-41384d839a88/11.jpg/514x514cc.webp",
+                    "title": "Stay (feat. Alida) - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music5/v4/74/f2/b2/74f2b220-908c-0b3e-3bc1-3f9dc90b55e8/cover.jpg/514x514cc.webp",
+                    "title": "Higher Place (All Mixes) - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music116/v4/9a/33/9a/9a339a1c-b001-a8e0-9ab2-2b19e5a5fd91/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "Sam Feldt Essentials",
+                    "subtitle": "Apple Music Dance"
+                },
+                {
+                    "url": "https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/a1/0e/6e/a10e6ec0-0d9a-413c-e5d5-e5e445d40d5a/8718522215308.png/514x514cc.webp",
+                    "title": "Because You Move Me II - Single",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/b5/ac/1f/b5ac1f6b-18b2-6397-8e70-0d8b59a42747/21UMGIM63606.rgb.jpg/514x514cc.webp",
+                    "title": "Never Going Home (Remixes)",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/aa/7f/c3/aa7fc391-8b4d-d065-16b8-238605700587/703980543948.png/514x514cc.webp",
+                    "title": "Elements - EP",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Music124/v4/d6/de/3b/d6de3bfd-dc60-6220-ece7-b35455b89cdc/8718522060113.png/514x514cc.webp",
+                    "title": "Are You With Me (Remixes) - EP",
+                    "subtitle": null
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Meet Your Goals",
+            "type": "small",
+            "items": [
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/ad/21/ea/ad21ea60-ed1f-5c71-fa1a-2fb5b3916c06/cover.jpg/514x514cc.webp",
+                    "title": "Vinyl #1",
+                    "subtitle": null
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features115/v4/b0/4e/e0/b04ee0fd-cce8-31c5-7e57-c4d37d4048a6/U0MtTVMtV1ctUG9wX1dvcmtvdXQtQURBTV9JRD0xMDA0NzgxMDkwLnBuZw.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Pop Workout",
+                    "subtitle": "Apple Music Pop"
+                },
+                {
+                    "url": "https://is5-ssl.mzstatic.com/image/thumb/Features125/v4/8d/91/ca/8d91ca12-fd56-d01f-b7fe-d1c25608dc67/pr_source.png/514x514SC.FPESS02.webp?l=en-GB",
+                    "title": "NF Essentials",
+                    "subtitle": "Apple Music Hip Hop/Rap"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/85/86/bf/8586bf5c-96eb-d7e2-04ae-3432292e2c15/U0MtTVMtV1ctUnVzc2lhbl9Qb3BfV29ya291dC1BREFNX0lEPTExNDYwMDczOTQucG5n.png/514x514SC.DN01.webp?l=en-GB",
+                    "title": "Pop Workout in Russian",
+                    "subtitle": "Apple Music Fitness"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Features125/v4/f4/c3/00/f4c30085-36c8-b4d1-2fee-916c0e4fd6eb/U0MtTVMtUlVTLV8xMHNfRGFuY2VfUGFydHlfRXNzZW50aWFscy1BREFNX0lEPTEzMzkzOTgwODQucG5n.png/514x514SC.CAHGOY01.webp?l=en-GB",
+                    "title": "2010s Dance Party Essentials",
+                    "subtitle": "Apple Music 2010s"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Features125/v4/fb/b3/c1/fbb3c114-11b6-aefe-fd97-2bdc2ffb242f/U0MtTVMtUlVTLV8xMHNfSGl0c19Fc3NlbnRpYWxzLUFEQU1fSUQ9MTMzOTM5OTAzMy5wbmc.png/514x514SC.CAHGOY01.webp?l=en-GB",
+                    "title": "2010s Hits Essentials",
+                    "subtitle": "Apple Music 2010s"
+                }
+            ]
+        },
+        {
+            "sectionHeader": "Replay: Your Top Songs by Year",
+            "type": "big",
+            "items": [
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Video126/v4/7c/c2/d0/7cc2d0b7-22f1-3a70-f3ba-caf9fc5bd662/Jobb3d879ee-04d6-4093-bc0b-0c4f287d1d65-128743142-PreviewImage_preview_image_nonvideo_sdr-Time1644730762792.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Ed Sheeran, GUMA, ANIVAR, Lvly, CYGO, MOTHICA, Бабек Мамедрзаев, Tanir & Tyomcha, Ashe, Nathan Evans, Jon Lajoie, MELVV",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Video126/v4/7c/c2/d0/7cc2d0b7-22f1-3a70-f3ba-caf9fc5bd662/Jobb3d879ee-04d6-4093-bc0b-0c4f287d1d65-128743142-PreviewImage_preview_image_nonvideo_sdr-Time1644730762792.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is3-ssl.mzstatic.com/image/thumb/Video115/v4/46/43/3c/46433c63-dfa8-47d9-09e2-619dae1ace43/Job533708a5-2a29-44a2-b7e7-61265f99d048-115331448-PreviewImage_preview_image_nonvideo_sdr-Time1623678746565.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Tommee Profitt, Barns Courtney, NEFFEX, Marshmello, Fousheé, Kina, Kamaara, Tesher, Nathan Dawe, Loud Luxury, Corey Gray, Polo & Pan",
+                    "footerUrl": "https://is3-ssl.mzstatic.com/image/thumb/Video115/v4/46/43/3c/46433c63-dfa8-47d9-09e2-619dae1ace43/Job533708a5-2a29-44a2-b7e7-61265f99d048-115331448-PreviewImage_preview_image_nonvideo_sdr-Time1623678746565.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Video125/v4/95/db/5b/95db5b2c-f3cb-f434-f750-c11fdc407aeb/Joba51d7662-2caf-46a8-bb5f-e6c56de498b7-113322134-PreviewImage_preview_image_nonvideo_sdr-Time1620769599548.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Elena Temnikova, HammAli & Navai, Halsey, Тайпан, Christina Perri, pyrokinesis, Eric Saade, Настя Гонцул, Tristam, Nneka, Evan Duffy, Aaron Smith",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Video125/v4/95/db/5b/95db5b2c-f3cb-f434-f750-c11fdc407aeb/Joba51d7662-2caf-46a8-bb5f-e6c56de498b7-113322134-PreviewImage_preview_image_nonvideo_sdr-Time1620769599548.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is4-ssl.mzstatic.com/image/thumb/Video125/v4/e7/02/2e/e7022e58-ee4b-c7d2-8c48-1f1cfb910160/Jobd87eaccd-400e-49f1-9803-07df83bfba0b-114308284-PreviewImage_PreviewImageIntermediate_preview_image_nonvideo_vfcs153148777-Time1622199425536.png/300x300cc.webp",
+                    "title": null,
+                    "details": "Birds of Tokyo, Nathan Dawe, ARIS, PNAU, MATRANG, Lukas Graham, Clean Bandit, RASA, DJ Tarantino, Olga Buzova, Martin Garrix, Sigala",
+                    "footerUrl": "https://is4-ssl.mzstatic.com/image/thumb/Video125/v4/e7/02/2e/e7022e58-ee4b-c7d2-8c48-1f1cfb910160/Jobd87eaccd-400e-49f1-9803-07df83bfba0b-114308284-PreviewImage_PreviewImageIntermediate_preview_image_nonvideo_vfcs153148777-Time1622199425536.png/44x44br-60.jpg"
+                },
+                {
+                    "url": "https://is1-ssl.mzstatic.com/image/thumb/Video115/v4/f2/c6/6f/f2c66f66-8a6f-ef41-03df-cf6cd5fec79d/Jobb50e09bc-c119-4cd6-b7d2-2404ea598642-114366229-PreviewImage_preview_image_nonvideo_sdr-Time1622230020908.png/300x300cc.webp",
+                    "title": null,
+                    "details": "PIZZA, AC/DC, Glass Animals, MALFA, Swanky Tunes, MOTHICA, FEDUK, Shallou, Catching Flies, Haux, LissA, Fhin",
+                    "footerUrl": "https://is1-ssl.mzstatic.com/image/thumb/Video115/v4/f2/c6/6f/f2c66f66-8a6f-ef41-03df-cf6cd5fec79d/Jobb50e09bc-c119-4cd6-b7d2-2404ea598642-114366229-PreviewImage_preview_image_nonvideo_sdr-Time1622230020908.png/44x44br-60.jpg"
+                }
+            ]
+        }
+    ]
+}

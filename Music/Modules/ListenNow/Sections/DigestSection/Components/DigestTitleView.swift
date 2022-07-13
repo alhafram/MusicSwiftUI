@@ -1,5 +1,5 @@
 //
-//  DigestTitleView.swift
+//  DigestSubtitleView.swift
 //  Music
 //
 //  Created by Albert on 10.07.2022.
@@ -8,24 +8,16 @@
 import SwiftUI
 
 struct DigestTitleView: View {
-    var title: String
+    var subtitle: String
     var body: some View {
-        VStack {
-            Text(title)
-                .multilineTextAlignment(.center)
-                .lineLimit(3)
-                .font(.body)
-                .foregroundColor(Color.white)
-                .padding(10)
-        }
-        .frame(width: 300, height: 100)
-        .background(Color.black.opacity(0.6))
-        .cornerRadius(12)
+        Text(subtitle)
+            .font(.headline)
+            .foregroundColor(.gray)
     }
 }
 
-struct DigestTitleView_Previews: PreviewProvider {
+struct DigestSubtitleView_Previews: PreviewProvider {
     static var previews: some View {
-        DigestTitleView(title: "")
+        DigestTitleView(subtitle: "")
     }
 }

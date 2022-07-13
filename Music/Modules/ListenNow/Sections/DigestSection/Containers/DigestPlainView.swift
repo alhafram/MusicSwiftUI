@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct DigestPlainView: View {
-    var viewModel: TopPicksViewModel.TopPick
+    var viewModel: MusicModel
     @State private var isLongPressing = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            DigestSubtitleView(subtitle: viewModel.subtitle)
-            VStack {
-                Spacer()
-                DigestTitleView(title: viewModel.title)
-            }
-            .frame(width: 300, height: 400)
-            .background {
-                BackgroundImageView(imageUrlString: viewModel.imageUrl, cornerRadius: 12, size: .init(width: 300, height: 400))
+            DigestTitleView(subtitle: viewModel.title ?? "")
+            ZStack {
+                VStack {}
+                .background {
+                    BackgroundImageView(imageUrlString: viewModel.url, cornerRadius: 12, size: .init(width: 300, height: 300))
+                }
+                DigestDetailsView(title: viewModel.details ?? "", footerUrl: viewModel.footerUrl)
+                    .padding(.top, 250)
             }
         }
         .scaleEffect(isLongPressing ? 0.95 : 1.0)
@@ -34,10 +34,6 @@ struct DigestPlainView: View {
 
 struct DigestPlainView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = TopPicksViewModel.TopPick(modelType: .plainView,
-                                                  title: "Albert's Station",
-                                                  subtitle: "Made for You",
-                                                  imageUrl: "http://192.168.1.7:8887/madeForYou.png")
-        DigestPlainView(viewModel: viewModel)
+        DigestPlainView(viewModel: MusicModel(url: ""))
     }
 }

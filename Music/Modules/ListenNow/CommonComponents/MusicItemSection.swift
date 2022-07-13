@@ -15,14 +15,14 @@ enum MusicItemSectionType {
 struct MusicItemSection: View {
     var type: MusicItemSectionType
     var title: String
-    var recentlyPlayed: [TopPicksViewModel.MusicItem]
+    var items: [MusicModel]
     
     var body: some View {
         VStack(alignment: .leading) {
             buildHeader()
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
-                    ForEach(recentlyPlayed, id: \.self) { musicItem in
+                    ForEach(items, id: \.self) { musicItem in
                         VStack {
                             MusicItemView(viewModel: musicItem)
                         }
@@ -55,7 +55,7 @@ struct MusicItemSection: View {
 
 struct MusicItemSection_Previews: PreviewProvider {
     static var previews: some View {
-        MusicItemSection(type: .standart, title: "", recentlyPlayed: [])
+        MusicItemSection(type: .standart, title: "", items: [])
     }
 }
 

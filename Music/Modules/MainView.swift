@@ -8,7 +8,14 @@
 import SwiftUI
 import CoreData
 
+class ListenNowSettings: ObservableObject {
+    @Published var sections = FileParser.getMusicSections()
+}
+
 struct MainView: View {
+    
+    @StateObject var listenNowSettings = ListenNowSettings()
+    
     var body: some View {
         TabView {
             ListenNowView()
@@ -32,6 +39,7 @@ struct MainView: View {
                     Label("Search", systemImage: "search")
                 }
         }
+        .environmentObject(listenNowSettings)
     }
 }
 
