@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		504559B3287AA9B800DA6569 /* TopPicksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B2287AA9B800DA6569 /* TopPicksViewModel.swift */; };
 		504559B7287AD34400DA6569 /* DigestPlainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B6287AD34400DA6569 /* DigestPlainView.swift */; };
 		504559BA287B02EA00DA6569 /* DigestDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559B9287B02EA00DA6569 /* DigestDetailsView.swift */; };
-		504559BE287B033C00DA6569 /* TopPicksAppleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BD287B033C00DA6569 /* TopPicksAppleLogoView.swift */; };
+		504559BE287B033C00DA6569 /* AppleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BD287B033C00DA6569 /* AppleLogoView.swift */; };
 		504FD83C287EF19100988D8C /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504FD83B287EF19100988D8C /* FileParser.swift */; };
 		504FD83E287EF1BE00988D8C /* Music.json in Resources */ = {isa = PBXBuildFile; fileRef = 504FD83D287EF1BE00988D8C /* Music.json */; };
 		50D4646F2879D3E7001D4829 /* MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D4646E2879D3E7001D4829 /* MusicApp.swift */; };
@@ -52,11 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		504559B2287AA9B800DA6569 /* TopPicksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksViewModel.swift; sourceTree = "<group>"; };
 		504559B6287AD34400DA6569 /* DigestPlainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestPlainView.swift; sourceTree = "<group>"; };
 		504559B8287AE91700DA6569 /* Music.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Music.entitlements; sourceTree = "<group>"; };
 		504559B9287B02EA00DA6569 /* DigestDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestDetailsView.swift; sourceTree = "<group>"; };
-		504559BD287B033C00DA6569 /* TopPicksAppleLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksAppleLogoView.swift; sourceTree = "<group>"; };
+		504559BD287B033C00DA6569 /* AppleLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogoView.swift; sourceTree = "<group>"; };
 		504FD83B287EF19100988D8C /* FileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileParser.swift; sourceTree = "<group>"; };
 		504FD83D287EF1BE00988D8C /* Music.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Music.json; sourceTree = "<group>"; };
 		50D4646B2879D3E7001D4829 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,44 +111,18 @@
 			isa = PBXGroup;
 			children = (
 				50D464A12879D608001D4829 /* ListenNowView.swift */,
-				50F472A7287B238600996773 /* CommonComponents */,
-				50F472A3287B20C100996773 /* Sections */,
-				504559C1287B045000DA6569 /* ViewModels */,
+				504FD83F287F11ED00988D8C /* Components */,
 			);
 			path = ListenNow;
 			sourceTree = "<group>";
 		};
-		504559BB287B031800DA6569 /* DigestSection */ = {
-			isa = PBXGroup;
-			children = (
-				504559C4287B04EA00DA6569 /* Containers */,
-				504559C5287B04FF00DA6569 /* Components */,
-				50F472A1287B09DC00996773 /* DigestMusicSection.swift */,
-			);
-			path = DigestSection;
-			sourceTree = "<group>";
-		};
-		504559C1287B045000DA6569 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				504559B2287AA9B800DA6569 /* TopPicksViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		504559C4287B04EA00DA6569 /* Containers */ = {
+		504FD83F287F11ED00988D8C /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				504559B6287AD34400DA6569 /* DigestPlainView.swift */,
-			);
-			path = Containers;
-			sourceTree = "<group>";
-		};
-		504559C5287B04FF00DA6569 /* Components */ = {
-			isa = PBXGroup;
-			children = (
 				504559B9287B02EA00DA6569 /* DigestDetailsView.swift */,
 				50F4729D287B081700996773 /* DigestTitleView.swift */,
+				50F472A1287B09DC00996773 /* DigestMusicSection.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -236,6 +208,7 @@
 		50D464A02879D468001D4829 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50F472A7287B238600996773 /* CommonComponents */,
 				50D464702879D3E7001D4829 /* MainView.swift */,
 				50D464A32879D623001D4829 /* BrowseView.swift */,
 				50D464A72879D683001D4829 /* LibraryView.swift */,
@@ -246,18 +219,10 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		50F472A3287B20C100996773 /* Sections */ = {
-			isa = PBXGroup;
-			children = (
-				504559BB287B031800DA6569 /* DigestSection */,
-			);
-			path = Sections;
-			sourceTree = "<group>";
-		};
 		50F472A7287B238600996773 /* CommonComponents */ = {
 			isa = PBXGroup;
 			children = (
-				504559BD287B033C00DA6569 /* TopPicksAppleLogoView.swift */,
+				504559BD287B033C00DA6569 /* AppleLogoView.swift */,
 				50F472A8287B23AF00996773 /* BackgroundImageView.swift */,
 				50F472A5287B20EA00996773 /* MusicItemSection.swift */,
 				50F472AA287B23D300996773 /* MusicItemContainerView.swift */,
@@ -408,10 +373,9 @@
 				50F472A2287B09DC00996773 /* DigestMusicSection.swift in Sources */,
 				50F472A6287B20EA00996773 /* MusicItemSection.swift in Sources */,
 				50D4646F2879D3E7001D4829 /* MusicApp.swift in Sources */,
-				504559B3287AA9B800DA6569 /* TopPicksViewModel.swift in Sources */,
 				50F4729E287B081700996773 /* DigestTitleView.swift in Sources */,
 				504559B7287AD34400DA6569 /* DigestPlainView.swift in Sources */,
-				504559BE287B033C00DA6569 /* TopPicksAppleLogoView.swift in Sources */,
+				504559BE287B033C00DA6569 /* AppleLogoView.swift in Sources */,
 				504FD83C287EF19100988D8C /* FileParser.swift in Sources */,
 				50D464A42879D623001D4829 /* BrowseView.swift in Sources */,
 				50D4647B2879D3E8001D4829 /* Music.xcdatamodeld in Sources */,

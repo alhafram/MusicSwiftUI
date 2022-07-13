@@ -20,7 +20,7 @@ struct MainView: View {
         TabView {
             ListenNowView()
                 .tabItem {
-                    Label("Listen now", systemImage: "list.dash")
+                    Label("Listen now", systemImage: "play.circle.fill")
                 }
             BrowseView()
                 .tabItem {
