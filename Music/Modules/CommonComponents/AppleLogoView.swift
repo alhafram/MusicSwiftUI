@@ -10,9 +10,9 @@ import SwiftUI
 struct AppleLogoView: View {
     var body: some View {
         Image(systemName: "apple.logo")
-            .foregroundColor(Color.white)
+            .foregroundColor(Color.backgroundColor)
         Text("Music")
-            .foregroundColor(Color.white)
+            .foregroundColor(Color.backgroundColor)
     }
 }
 

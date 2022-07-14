@@ -19,7 +19,7 @@ struct DigestDetailsView: View {
                 .foregroundColor(Color.white)
                 .padding(10)
         }
-        .frame(width: 300, height: 100)
+        .frame(width: 300, height: 90)
         .background {
             AsyncImage(url: URL(string: footerUrl ?? "")) { image in
                 image

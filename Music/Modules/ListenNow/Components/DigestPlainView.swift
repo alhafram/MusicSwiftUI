@@ -14,14 +14,13 @@ struct DigestPlainView: View {
     var body: some View {
         VStack(alignment: .leading) {
             DigestTitleView(subtitle: viewModel.title ?? "")
-            ZStack {
-                VStack {}
+            VStack {}
                 .background {
                     BackgroundImageView(imageUrlString: viewModel.url, cornerRadius: 12, size: .init(width: 300, height: 300))
                 }
-                DigestDetailsView(title: viewModel.details ?? "", footerUrl: viewModel.footerUrl)
-                    .padding(.top, 250)
-            }
+                .frame(width: 300, height: 300)
+            DigestDetailsView(title: viewModel.details ?? "", footerUrl: viewModel.footerUrl)
+                .padding(.top, -20)
         }
         .scaleEffect(isLongPressing ? 0.95 : 1.0)
         .onLongPressGesture(minimumDuration: .infinity, pressing: { isPressing in
@@ -34,6 +33,7 @@ struct DigestPlainView: View {
 
 struct DigestPlainView_Previews: PreviewProvider {
     static var previews: some View {
-        DigestPlainView(viewModel: MusicModel(url: ""))
+        let object = FileParser.getMusicSections()[0].items[0]
+        DigestPlainView(viewModel: object)
     }
 }

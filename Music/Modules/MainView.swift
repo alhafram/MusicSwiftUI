@@ -7,6 +7,9 @@
 
 import SwiftUI
 import CoreData
+import MusicKit
+import MediaPlayer
+import Combine
 
 class ListenNowSettings: ObservableObject {
     @Published var sections = FileParser.getMusicSections()
@@ -14,32 +17,19 @@ class ListenNowSettings: ObservableObject {
 
 struct MainView: View {
     
+    @ObservedObject var router = Router()
+    @State var route = Route.launchScreen
     @StateObject var listenNowSettings = ListenNowSettings()
     
     var body: some View {
-        TabView {
-            ListenNowView()
-                .tabItem {
-                    Label("Listen now", systemImage: "play.circle.fill")
-                }
-            BrowseView()
-                .tabItem {
-                    Label("Browse", systemImage: "square.and.pencil")
-                }
-            RadioView()
-                .tabItem {
-                    Label("Radio", systemImage: "radio")
-                }
-            LibraryView()
-                .tabItem {
-                    Label("Library", systemImage: "library")
-                }
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "search")
-                }
+        switch router.route {
+        case .launchScreen:
+            LaunchScreenView()
+                .environmentObject(router)
+        case .mainScreen:
+            MainTabView()
+                .environmentObject(listenNowSettings)
         }
-        .environmentObject(listenNowSettings)
     }
 }
 
