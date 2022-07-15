@@ -9,15 +9,15 @@ import SwiftUI
 
 struct MainTabView: View {
     
-    @EnvironmentObject var listenNowSettings: ListenNowSettings
+    @EnvironmentObject private var router: Router
     
     var body: some View {
         TabView {
-            ListenNowView()
+            ChartsView()
                 .tabItem {
-                    Label("Listen now", systemImage: "play.circle.fill")
+                    Label("Top Charts", systemImage: "chart.line.uptrend.xyaxis")
                 }
-                .environmentObject(listenNowSettings)
+                .environmentObject(router)
             BrowseView()
                 .tabItem {
                     Label("Browse", systemImage: "square.and.pencil")
@@ -41,6 +41,5 @@ struct MainTabView: View {
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
-            .environmentObject(ListenNowSettings())
     }
 }

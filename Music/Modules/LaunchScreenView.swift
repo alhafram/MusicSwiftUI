@@ -10,12 +10,11 @@ import SwiftUI
 struct LaunchScreenView: View {
     
     @EnvironmentObject var router: Router
+    @EnvironmentObject var musicManager: MusicManager
     
     @State var showSettingsButton = false
     @State var animating = true
     @State private var blinking: Bool = false
-    
-    private let musicManager = MusicManager()
     
     var foreverAnimation: Animation {
         Animation

@@ -11,24 +11,20 @@ import MusicKit
 import MediaPlayer
 import Combine
 
-class ListenNowSettings: ObservableObject {
-    @Published var sections = FileParser.getMusicSections()
-}
-
 struct MainView: View {
     
-    @ObservedObject var router = Router()
-    @State var route = Route.launchScreen
-    @StateObject var listenNowSettings = ListenNowSettings()
+    @ObservedObject private var router = Router()
+    @ObservedObject private var musicManager = MusicManager()
     
     var body: some View {
         switch router.route {
         case .launchScreen:
             LaunchScreenView()
                 .environmentObject(router)
+                .environmentObject(musicManager)
         case .mainScreen:
             MainTabView()
-                .environmentObject(listenNowSettings)
+                .environmentObject(router)
         }
     }
 }
