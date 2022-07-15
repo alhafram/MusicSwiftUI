@@ -46,7 +46,7 @@ class ChartsProvider: ObservableObject {
             fetching = true
             do {
                 if batcher?.hasNextBatch ?? false {
-                    let res = try await batcher?.nextBatch(limit: 10)
+                    let res = try await batcher?.nextBatch(limit: 20)
                     guard let res = res else { return }
                     batcher = res
                     let newBatch = res.map { AlbumChartViewModel.Item(artistName: $0.artistName, title: $0.title, artwork: $0.artwork) }

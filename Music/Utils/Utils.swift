@@ -50,6 +50,10 @@ extension Artwork {
     var textColor: Color {
         return Color(cgColor: primaryTextColor ?? .defaultColor)
     }
+    
+    var secondTextColor: Color {
+        return Color(cgColor: secondaryTextColor ?? .defaultColor)
+    }
 }
 
 extension CGColor {

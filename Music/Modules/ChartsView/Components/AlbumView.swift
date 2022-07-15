@@ -19,17 +19,23 @@ struct AlbumView: View {
     }
     
     private var footerView: some View {
-        ZStack(alignment: .leading) {
+        ZStack(alignment: .center) {
             VStack { }
                 .frame(width: imageSize, height: 80)
                 .background(item.artwork?.bgColor)
                 .cornerRadius(12)
-            Text(item.title)
-                .multilineTextAlignment(.center)
-                .lineLimit(3)
-                .foregroundColor(item.artwork?.textColor)
-                .padding()
-                .frame(width: imageSize)
+            VStack {
+                Text(item.title)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(1)
+                    .foregroundColor(item.artwork?.textColor)
+                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                Text(item.artistName)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(1)
+                    .foregroundColor(item.artwork?.secondTextColor)
+            }
+            .frame(width: imageSize)
         }
         .padding(.top, -30)
     }
