@@ -30,6 +30,11 @@ struct ChartsView: View {
                             PlaylistSectionView(viewModel: playlistChartViewModel)
                                 .environmentObject(chartsProvider)
                         }
+                        
+                        ForEach(chartsProvider.musicVideoChartViewModels) { musicVideoChartViewModel in
+                            MusicVideoSectionView(viewModel: musicVideoChartViewModel)
+                                .environmentObject(chartsProvider)
+                        }
                     }
                 }
                 .listStyle(.plain)

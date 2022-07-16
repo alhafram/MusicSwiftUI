@@ -72,3 +72,37 @@ extension PlaylistChartViewModel {
         var artwork: Artwork?
     }
 }
+
+
+class MusicVideoChartViewModel: ObservableObject, Identifiable {
+    
+    @Published var items: [Item]
+    
+    let title: String
+    var batcher: MusicItemCollection<MusicVideo>
+    
+    init(musicVideoChart: MusicCatalogChart<MusicVideo>) {
+        self.title = musicVideoChart.title
+        self.items = musicVideoChart.items.map {
+            Item(artistName: $0.artistName, title: $0.title, artwork: $0.artwork)
+        }
+        self.batcher = musicVideoChart.items
+    }
+    
+    func updateBatcher(_ batcher: MusicItemCollection<MusicVideo>) {
+        self.batcher = batcher
+    }
+    
+    func addItems(_ items: [Item]) {
+        self.items.append(contentsOf: items)
+    }
+}
+
+extension MusicVideoChartViewModel {
+    struct Item: Hashable, Identifiable {
+        var id = UUID()
+        var artistName: String
+        var title: String
+        var artwork: Artwork?
+    }
+}
