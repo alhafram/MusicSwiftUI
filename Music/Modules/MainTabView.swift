@@ -10,31 +10,46 @@ import SwiftUI
 struct MainTabView: View {
     
     @EnvironmentObject private var router: Router
+    @AppStorage("selection") private var selection = 0
     
     var body: some View {
-        TabView {
+        TabView(selection: .constant(selection)) {
             ChartsView()
+                .onAppear {
+                    selection = 0
+                }
                 .tabItem {
                     Label("Top Charts", systemImage: "chart.line.uptrend.xyaxis")
                 }
                 .environmentObject(router)
-            BrowseView()
-                .tabItem {
-                    Label("Browse", systemImage: "square.and.pencil")
+                .tag(0)
+            RecentlyPlayedView()
+                .onAppear {
+                    selection = 1
                 }
+                .tabItem {
+                    Label("Recently played", systemImage: "arrow.counterclockwise.circle")
+                }
+                .environmentObject(router)
+                .tag(1)
             RadioView()
-                .tabItem {
-                    Label("Radio", systemImage: "radio")
+                .onAppear {
+                    selection = 2
                 }
+                .tabItem {
+                    Label("Recomendations", systemImage: "radio")
+                }
+                .tag(2)
             LibraryView()
-                .tabItem {
-                    Label("Library", systemImage: "library")
+                .onAppear {
+                    selection = 3
                 }
-            SearchView()
                 .tabItem {
-                    Label("Search", systemImage: "search")
+                    Label("Library", systemImage: "music.note.list")
                 }
+                .tag(3)
         }
+        .accentColor(Color.red)
     }
 }
 
