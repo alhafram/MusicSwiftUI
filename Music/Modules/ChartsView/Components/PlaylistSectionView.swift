@@ -1,5 +1,5 @@
 //
-//  AlbumSectionView.swift
+//  PlaylistSectionView.swift
 //  Music
 //
 //  Created by Albert on 15.07.2022.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AlbumSectionView: View {
+struct PlaylistSectionView: View {
     
     @EnvironmentObject private var chartsProvider: ChartsProvider
-    @StateObject var viewModel: AlbumChartViewModel
+    @StateObject var viewModel: PlaylistChartViewModel
     
     var title: some View {
         Text(viewModel.title)
@@ -25,7 +25,7 @@ struct AlbumSectionView: View {
         ScrollView(.horizontal) {
             LazyHStack(spacing: 20) {
                 ForEach(viewModel.items) { item in
-                    AlbumView(item: item)
+                    PlaylistView(item: item)
                         .task {
                             await chartsProvider.fetchNext(currentItem: item, in: viewModel)
                         }
@@ -37,8 +37,8 @@ struct AlbumSectionView: View {
     }
 }
 
-//struct AlbumSectionView_Previews: PreviewProvider {
+//struct PlaylistSectionView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        AlbumSectionView(viewModel: )
+//        PlaylistSectionView(viewModel: )
 //    }
 //}

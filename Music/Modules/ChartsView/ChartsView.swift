@@ -11,19 +11,25 @@ struct ChartsView: View {
     
     @EnvironmentObject private var router: Router
     
-    @ObservedObject var viewModel = ChartsProvider()
+    @ObservedObject var chartsProvider = ChartsProvider()
     
     @ViewBuilder
     func getContentView() -> some View {
-        switch viewModel.state {
+        switch chartsProvider.state {
         case .loading:
             ProgressView()
         case .data:
             NavigationView {
                 ScrollView {
                     VStack(alignment: .leading) {
-                        AlbumSectionView()
-                            .environmentObject(viewModel)
+                        ForEach(chartsProvider.albumChartViewModels) { albumChartViewModel in
+                            AlbumSectionView(viewModel: albumChartViewModel)
+                                .environmentObject(chartsProvider)
+                        }
+                        ForEach(chartsProvider.playlistChartViewModels) { playlistChartViewModel in
+                            PlaylistSectionView(viewModel: playlistChartViewModel)
+                                .environmentObject(chartsProvider)
+                        }
                     }
                 }
                 .listStyle(.plain)
@@ -38,7 +44,7 @@ struct ChartsView: View {
     var body: some View {
         getContentView()
             .task {
-                await viewModel.loadCharts()
+                await chartsProvider.loadCharts()
             }
     }
 }

@@ -26,11 +26,13 @@ struct AlbumView: View {
                 .cornerRadius(12)
             VStack {
                 Text(item.title)
+                    .font(.system(size: 16, weight: .semibold))
                     .multilineTextAlignment(.center)
                     .lineLimit(1)
                     .foregroundColor(item.artwork?.textColor)
                     .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
                 Text(item.artistName)
+                    .font(.system(size: 16))
                     .multilineTextAlignment(.center)
                     .lineLimit(1)
                     .foregroundColor(item.artwork?.secondTextColor)
@@ -40,7 +42,7 @@ struct AlbumView: View {
         .padding(.top, -30)
     }
     
-    private var backgroundImage: some View {
+    private var backgroundImageView: some View {
         VStack {}
             .frame(width: imageSize, height: imageSize)
             .background {
@@ -58,7 +60,7 @@ struct AlbumView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            backgroundImage
+            backgroundImageView
             footerView
         }
         .scaleEffect(isLongPressing ? 0.95 : 1.0)

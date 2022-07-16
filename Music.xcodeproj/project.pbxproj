@@ -13,6 +13,8 @@
 		502F8D1F28819C7B0027E2FF /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D1E28819C7B0027E2FF /* CachedAsyncImage.swift */; };
 		502F8D222881B37A0027E2FF /* MusicAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D212881B37A0027E2FF /* MusicAPIManager.swift */; };
 		502F8D252881B3D40027E2FF /* AlbumChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D242881B3D40027E2FF /* AlbumChartViewModel.swift */; };
+		502F8D272881EC610027E2FF /* PlaylistSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D262881EC610027E2FF /* PlaylistSectionView.swift */; };
+		502F8D292881ECAF0027E2FF /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D282881ECAF0027E2FF /* PlaylistView.swift */; };
 		504559BE287B033C00DA6569 /* AppleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BD287B033C00DA6569 /* AppleLogoView.swift */; };
 		50855B18288090BD004A925B /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50855B17288090BD004A925B /* MusicViewModel.swift */; };
 		50A4B106287FED2E001F2D4E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4B105287FED2E001F2D4E /* LaunchScreenView.swift */; };
@@ -61,6 +63,8 @@
 		502F8D1E28819C7B0027E2FF /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		502F8D212881B37A0027E2FF /* MusicAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAPIManager.swift; sourceTree = "<group>"; };
 		502F8D242881B3D40027E2FF /* AlbumChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumChartViewModel.swift; sourceTree = "<group>"; };
+		502F8D262881EC610027E2FF /* PlaylistSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSectionView.swift; sourceTree = "<group>"; };
+		502F8D282881ECAF0027E2FF /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
 		504559B8287AE91700DA6569 /* Music.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Music.entitlements; sourceTree = "<group>"; };
 		504559BD287B033C00DA6569 /* AppleLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogoView.swift; sourceTree = "<group>"; };
 		50855B17288090BD004A925B /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				502F8D18288172060027E2FF /* AlbumSectionView.swift */,
+				502F8D262881EC610027E2FF /* PlaylistSectionView.swift */,
+				502F8D282881ECAF0027E2FF /* PlaylistView.swift */,
 				502F8D1A288178550027E2FF /* AlbumView.swift */,
 			);
 			path = Components;
@@ -405,11 +411,13 @@
 				50D464782879D3E8001D4829 /* Persistence.swift in Sources */,
 				50D464712879D3E7001D4829 /* MainView.swift in Sources */,
 				502F8D252881B3D40027E2FF /* AlbumChartViewModel.swift in Sources */,
+				502F8D292881ECAF0027E2FF /* PlaylistView.swift in Sources */,
 				50D464A82879D683001D4829 /* LibraryView.swift in Sources */,
 				50A4B106287FED2E001F2D4E /* LaunchScreenView.swift in Sources */,
 				502F8D19288172060027E2FF /* AlbumSectionView.swift in Sources */,
 				50A4B108287FED75001F2D4E /* Router.swift in Sources */,
 				50D4646F2879D3E7001D4829 /* MusicApp.swift in Sources */,
+				502F8D272881EC610027E2FF /* PlaylistSectionView.swift in Sources */,
 				50FC57EF28801A2100CFB000 /* Utils.swift in Sources */,
 				50FC57EB2880089000CFB000 /* MusicManager.swift in Sources */,
 				502F8D1B288178550027E2FF /* AlbumView.swift in Sources */,
@@ -586,7 +594,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,7 +626,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
