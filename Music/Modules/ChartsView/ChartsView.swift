@@ -49,7 +49,9 @@ struct ChartsView: View {
     var body: some View {
         getContentView()
             .task {
-                await chartsProvider.loadCharts()
+                if chartsProvider.state == .loading {
+                    await chartsProvider.loadCharts()
+                }
             }
     }
 }

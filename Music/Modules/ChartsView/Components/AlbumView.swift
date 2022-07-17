@@ -10,7 +10,6 @@ import SwiftUI
 struct AlbumView: View {
     
     @State var item: AlbumChartViewModel.Item
-    @State private var isLongPressing = false
     
     private let imageSize: CGFloat = 300
     
@@ -63,16 +62,10 @@ struct AlbumView: View {
             backgroundImageView
             footerView
         }
-        .scaleEffect(isLongPressing ? 0.95 : 1.0)
         .onTapGesture {
             // TODO: - Then open album content
             print("Open album")
         }
-        .onLongPressGesture(minimumDuration: .infinity, pressing: { isPressing in
-            withAnimation {
-                isLongPressing = isPressing
-            }
-        }) {}
     }
 }
 

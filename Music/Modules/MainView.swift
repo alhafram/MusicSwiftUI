@@ -6,10 +6,7 @@
 //
 
 import SwiftUI
-import CoreData
 import MusicKit
-import MediaPlayer
-import Combine
 
 struct MainView: View {
     

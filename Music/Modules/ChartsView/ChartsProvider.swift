@@ -41,6 +41,7 @@ class ChartsProvider: ObservableObject {
             (albumChartViewModels, playlistChartViewModels, musicVideoChartViewModels) = try await MusicAPIManager().getCharts()
             state = .data
         } catch {
+            print("Error", error.localizedDescription)
             state = .error
         }
     }

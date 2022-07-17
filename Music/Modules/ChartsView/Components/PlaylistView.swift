@@ -10,7 +10,6 @@ import SwiftUI
 struct PlaylistView: View {
     
     @State var item: PlaylistChartViewModel.Item
-    @State private var isLongPressing = false
     
     private let imageSize: CGFloat = 200
     
@@ -46,16 +45,10 @@ struct PlaylistView: View {
             backgroundImageView
             titleView
         }
-        .scaleEffect(isLongPressing ? 0.95 : 1.0)
         .onTapGesture {
             // TODO: - Then open album content
             print("Open playlist")
         }
-        .onLongPressGesture(minimumDuration: .infinity, pressing: { isPressing in
-            withAnimation {
-                isLongPressing = isPressing
-            }
-        }) {}
     }
 }
 

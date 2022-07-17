@@ -10,7 +10,6 @@ import SwiftUI
 struct MusicVideoView: View {
     
     @State var item: MusicVideoChartViewModel.Item
-    @State private var isLongPressing = false
     
     private let imageSize: CGFloat = 300
     
@@ -55,16 +54,10 @@ struct MusicVideoView: View {
             backgroundImageView
             titleView
         }
-        .scaleEffect(isLongPressing ? 0.95 : 1.0)
         .onTapGesture {
             // TODO: - Then open video content
             print("Open music video")
         }
-        .onLongPressGesture(minimumDuration: .infinity, pressing: { isPressing in
-            withAnimation {
-                isLongPressing = isPressing
-            }
-        }) {}
     }
 }
 
