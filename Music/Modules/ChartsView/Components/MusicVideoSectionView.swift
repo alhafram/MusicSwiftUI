@@ -10,6 +10,8 @@ import SwiftUI
 struct MusicVideoSectionView: View {
     
     @EnvironmentObject private var chartsProvider: ChartsProvider
+    @EnvironmentObject private var router: Router
+    
     @StateObject var viewModel: MusicVideoChartViewModel
     
     var title: some View {
@@ -29,6 +31,7 @@ struct MusicVideoSectionView: View {
                         .task {
                             await chartsProvider.fetchNext(currentItem: item, in: viewModel)
                         }
+                        .environmentObject(router)
                 }
             }
         }

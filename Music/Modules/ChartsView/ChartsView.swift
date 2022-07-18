@@ -10,8 +10,7 @@ import SwiftUI
 struct ChartsView: View {
     
     @EnvironmentObject private var router: Router
-    
-    @ObservedObject var chartsProvider = ChartsProvider()
+    @StateObject var chartsProvider = ChartsProvider()
     
     @ViewBuilder
     func getContentView() -> some View {
@@ -25,15 +24,18 @@ struct ChartsView: View {
                         ForEach(chartsProvider.albumChartViewModels) { albumChartViewModel in
                             AlbumSectionView(viewModel: albumChartViewModel)
                                 .environmentObject(chartsProvider)
+                                .environmentObject(router)
                         }
                         ForEach(chartsProvider.playlistChartViewModels) { playlistChartViewModel in
                             PlaylistSectionView(viewModel: playlistChartViewModel)
                                 .environmentObject(chartsProvider)
+                                .environmentObject(router)
                         }
                         
                         ForEach(chartsProvider.musicVideoChartViewModels) { musicVideoChartViewModel in
                             MusicVideoSectionView(viewModel: musicVideoChartViewModel)
                                 .environmentObject(chartsProvider)
+                                .environmentObject(router)
                         }
                     }
                 }
@@ -51,6 +53,7 @@ struct ChartsView: View {
             .task {
                 if chartsProvider.state == .loading {
                     await chartsProvider.loadCharts()
+                    chartsProvider.state = .data
                 }
             }
     }

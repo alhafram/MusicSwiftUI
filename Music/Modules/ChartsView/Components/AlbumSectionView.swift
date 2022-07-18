@@ -10,6 +10,7 @@ import SwiftUI
 struct AlbumSectionView: View {
     
     @EnvironmentObject private var chartsProvider: ChartsProvider
+    @EnvironmentObject private var router: Router
     @StateObject var viewModel: AlbumChartViewModel
     
     var title: some View {
@@ -29,6 +30,7 @@ struct AlbumSectionView: View {
                         .task {
                             await chartsProvider.fetchNext(currentItem: item, in: viewModel)
                         }
+                        .environmentObject(router)
                 }
             }
         }

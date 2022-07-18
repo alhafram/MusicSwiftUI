@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PlaylistView: View {
     
+    @EnvironmentObject private var router: Router
+    
     @State var item: PlaylistChartViewModel.Item
     
     private let imageSize: CGFloat = 200
@@ -44,10 +46,6 @@ struct PlaylistView: View {
         VStack(alignment: .leading) {
             backgroundImageView
             titleView
-        }
-        .onTapGesture {
-            // TODO: - Then open album content
-            print("Open playlist")
         }
     }
 }

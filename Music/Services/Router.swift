@@ -16,4 +16,5 @@ enum MainRoute {
 
 class Router: ObservableObject {
     @Published var route = MainRoute.launchScreen
+    @Published var showMusicBar = false
 }

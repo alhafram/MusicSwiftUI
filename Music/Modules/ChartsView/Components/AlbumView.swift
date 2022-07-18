@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AlbumView: View {
     
+    @EnvironmentObject private var router: Router
+    
     @State var item: AlbumChartViewModel.Item
     
     private let imageSize: CGFloat = 300
@@ -63,8 +65,7 @@ struct AlbumView: View {
             footerView
         }
         .onTapGesture {
-            // TODO: - Then open album content
-            print("Open album")
+            router.showMusicBar.toggle()
         }
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MusicVideoView: View {
     
+    @EnvironmentObject private var router: Router
+    
     @State var item: MusicVideoChartViewModel.Item
     
     private let imageSize: CGFloat = 300
@@ -53,10 +55,6 @@ struct MusicVideoView: View {
         VStack(alignment: .leading) {
             backgroundImageView
             titleView
-        }
-        .onTapGesture {
-            // TODO: - Then open video content
-            print("Open music video")
         }
     }
 }

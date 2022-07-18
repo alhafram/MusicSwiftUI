@@ -49,6 +49,38 @@ struct MainTabView: View {
                 }
                 .tag(3)
         }
+        
+        .overlay(alignment: .bottom) {
+            if router.showMusicBar {
+                HStack {
+                    VStack {
+                        
+                    }
+                    .frame(width: 50, height: 50)
+                    .background(.red)
+                    .cornerRadius(4)
+                    .padding()
+                    Text("Some song name")
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "pause")
+                    }
+                    .padding()
+                    Button {
+                        print("Backward")
+                    } label: {
+                        Image(systemName: "forward")
+                    }
+                    .padding()
+                }
+                .frame(width: UIScreen.main.bounds.width, height: 70)
+                .background(.gray)
+                .foregroundColor(.white)
+                .padding(.bottom, 49)
+            }
+        }
         .accentColor(Color.red)
     }
 }
