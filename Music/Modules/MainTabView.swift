@@ -10,7 +10,7 @@ import Combine
 
 struct MainTabView: View {
     
-    @ObservedObject private var musicManager = MusicManager()
+    @StateObject private var musicManager = MusicManager()
     @EnvironmentObject private var router: Router
     @AppStorage("selection") private var selection = 0
     

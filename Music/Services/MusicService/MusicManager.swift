@@ -17,6 +17,7 @@ class MusicManager: ObservableObject {
     @Published var musicDuration: TimeInterval = 0.0
     @Published var songIconUrl: URL?
     @Published var status: MusicPlayer.PlaybackStatus = .stopped
+    @Published var playbackTime: TimeInterval = 0.0
     
     static func getAuthorizationStatus() async -> MusicAuthorization.Status {
         return await MusicAuthorization.request()
@@ -45,6 +46,7 @@ class MusicManager: ObservableObject {
                     timer.invalidate()
                 }
                 status = mediaPlayer.state.playbackStatus
+                playbackTime = mediaPlayer.playbackTime
             }
         }
         .store(in: &store)
