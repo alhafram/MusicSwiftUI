@@ -10,6 +10,8 @@ import SwiftUI
 struct ChartsView: View {
     
     @EnvironmentObject private var router: Router
+    @EnvironmentObject private var musicManager: MusicManager
+    
     @StateObject var chartsProvider = ChartsProvider()
     
     @ViewBuilder
@@ -25,21 +27,29 @@ struct ChartsView: View {
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
                                 .environmentObject(router)
+                                .environmentObject(musicManager)
                         }
                         ForEach(chartsProvider.playlistChartViewModels) { viewModel in
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
                                 .environmentObject(router)
+                                .environmentObject(musicManager)
                         }
                         ForEach(chartsProvider.musicVideoChartViewModels) { viewModel in
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
                                 .environmentObject(router)
+                                .environmentObject(musicManager)
                         }
                         ForEach(chartsProvider.songChartViewModels) { viewModel in
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
                                 .environmentObject(router)
+                                .environmentObject(musicManager)
+                        }
+                        if musicManager.musicItem != nil {
+                            Text("")
+                                .frame(height: 100)
                         }
                     }
                 }
@@ -67,5 +77,6 @@ struct ListenNowView_Previews: PreviewProvider {
     static var previews: some View {
         ChartsView()
             .environmentObject(Router())
+            .environmentObject(MusicManager())
     }
 }

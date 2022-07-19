@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MainTabView: View {
     
+    @ObservedObject private var musicManager = MusicManager()
     @EnvironmentObject private var router: Router
     @AppStorage("selection") private var selection = 0
     
@@ -22,6 +24,7 @@ struct MainTabView: View {
                     Label("Top Charts", systemImage: "chart.line.uptrend.xyaxis")
                 }
                 .environmentObject(router)
+                .environmentObject(musicManager)
                 .tag(0)
             RecentlyPlayedView()
                 .onAppear {
@@ -50,42 +53,14 @@ struct MainTabView: View {
                 .tag(3)
                 .accentColor(Color.red)
         }
-        
-        .overlay(alignment: .bottom) {
-            musicBar
+        .onAppear {
+            musicManager.startObserving()
         }
-    }
-    
-    @ViewBuilder
-    var musicBar: some View {
-        if router.showMusicBar {
-            HStack {
-                VStack {
-                    
-                }
-                .frame(width: 50, height: 50)
-                .background(.red)
-                .cornerRadius(4)
-                .padding()
-                Text("Some song name")
-                Spacer()
-                Button {
-                    
-                } label: {
-                    Image(systemName: "pause")
-                }
-                .padding()
-                Button {
-                    print("Backward")
-                } label: {
-                    Image(systemName: "forward")
-                }
-                .padding()
+        .overlay(alignment: .bottom) {
+            if musicManager.musicItem != nil {
+                MusicBar()
+                    .environmentObject(musicManager)
             }
-            .frame(width: UIScreen.main.bounds.width, height: 70)
-            .background(.gray)
-            .foregroundColor(.white)
-            .padding(.bottom, 49)
         }
     }
 }

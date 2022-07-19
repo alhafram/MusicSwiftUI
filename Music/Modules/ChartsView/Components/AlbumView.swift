@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AlbumView: View {
     
-    @EnvironmentObject private var router: Router
-    
     @State var item: ChartViewModelItem
     
     private let imageSize: CGFloat = 300
@@ -63,9 +61,6 @@ struct AlbumView: View {
         VStack(alignment: .leading) {
             backgroundImageView
             footerView
-        }
-        .onTapGesture {
-            
         }
     }
 }

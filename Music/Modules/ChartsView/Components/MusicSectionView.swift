@@ -12,6 +12,7 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
     
     @EnvironmentObject private var chartsProvider: ChartsProvider
     @EnvironmentObject private var router: Router
+    @EnvironmentObject private var musicManager: MusicManager
     
     @ObservedObject var viewModel: ChartViewModel<T>
     
@@ -32,28 +33,36 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
                 .task {
                     await nextFetch(item: item)
                 }
-                .environmentObject(router)
+                .onTapGesture {
+                    print(item.item)
+                }
         }
         if viewModel.type is Playlist.Type {
             PlaylistView(item: item)
                 .task {
                     await nextFetch(item: item)
                 }
-                .environmentObject(router)
+                .onTapGesture {
+                    print(item.item)
+                }
         }
         if viewModel.type is MusicVideo.Type {
             MusicVideoView(item: item)
                 .task {
                     await nextFetch(item: item)
                 }
-                .environmentObject(router)
+                .onTapGesture {
+                    print(item.item)
+                }
         }
         if viewModel.type is Song.Type {
-            PlaylistView(item: item)
+            SongView(item: item)
                 .task {
                     await nextFetch(item: item)
                 }
-                .environmentObject(router)
+                .onTapGesture {
+                    musicManager.musicItem = item.item
+                }
         }
     }
     

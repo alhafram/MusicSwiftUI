@@ -12,18 +12,42 @@ import Combine
 
 class MusicManager: ObservableObject {
     
+    @Published var musicItem: MyMusicItem?
+    @Published var songTitle: String = ""
+    @Published var musicDuration: TimeInterval = 0.0
+    @Published var songIconUrl: URL?
+    @Published var status: MusicPlayer.PlaybackStatus = .stopped
+    
+    static func getAuthorizationStatus() async -> MusicAuthorization.Status {
+        return await MusicAuthorization.request()
+    }
+    
     let currentTimePublisher = CurrentValueSubject<TimeInterval, Never>(0)
     
+    private var store = Set<AnyCancellable>()
     private var mediaPlayer: ApplicationMusicPlayer {
         ApplicationMusicPlayer.shared
     }
     
-    var playbackTime: TimeInterval {
-        mediaPlayer.playbackTime
-    }
-    
-    static func getAuthorizationStatus() async -> MusicAuthorization.Status {
-        return await MusicAuthorization.request()
+    func startObserving() {
+        $musicItem.sink { item in
+            guard let item = item else { return }
+            if let song = item as? Song {
+                self.songTitle = song.title
+                self.songIconUrl = song.artwork?.url(width: 50, height: 50)
+                self.musicDuration = song.duration ?? 0
+                Task {
+                    try await self.play(song: song)
+                }
+            }
+            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [self] timer in
+                if musicItem == nil {
+                    timer.invalidate()
+                }
+                status = mediaPlayer.state.playbackStatus
+            }
+        }
+        .store(in: &store)
     }
     
     func get() {

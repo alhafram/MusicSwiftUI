@@ -9,8 +9,6 @@ import SwiftUI
 
 struct PlaylistView: View {
     
-    @EnvironmentObject private var router: Router
-    
     @State var item: ChartViewModelItem
     
     private let imageSize: CGFloat = 200
@@ -47,11 +45,5 @@ struct PlaylistView: View {
             backgroundImageView
             titleView
         }
-    }
-}
-
-struct PlaylistView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaylistView(item: ChartViewModelItem(title: ""))
     }
 }

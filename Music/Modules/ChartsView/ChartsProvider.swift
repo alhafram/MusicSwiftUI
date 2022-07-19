@@ -45,7 +45,7 @@ class ChartsProvider: ObservableObject {
             fetching = true
             do {
                 try await musicManager.fetchNext(batcher: &viewModel.batcher)
-                let newItems = viewModel.parse(viewModel.batcher)
+                let newItems = viewModel.parseItems()
                 viewModel.addItems(newItems)
             } catch {
                 print(error)

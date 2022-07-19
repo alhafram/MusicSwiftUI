@@ -34,30 +34,30 @@ struct MusicView: View {
     
     var slider: some View {
         VStack {
-            Slider(value: .constant(musicManager.playbackTime), in: 0...musicViewModel.duration, onEditingChanged: { editing in
-                if editing {
-                    musicViewModel.sliderEditing = editing
-                }
-                if !editing {
-                    musicManager.skipTo(musicViewModel.currentMusicTime)
-                    DispatchQueue.global().asyncAfter(deadline: .now() + 0.3) {
-                        musicViewModel.sliderEditing = false
-                    }
-                }
-            })
-            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-            HStack {
-                Text(musicViewModel.currentMusicTimeString)
-                    .padding(.top, -20)
-                    .font(.callout)
-                    .foregroundColor(Color.gray)
-                Spacer()
-                Text(musicViewModel.remainingMusicTimeString)
-                    .padding(.top, -20)
-                    .font(.callout)
-                    .foregroundColor(Color.gray)
-            }
-            .padding()
+//            Slider(value: .constant(musicManager.playbackTime), in: 0...musicViewModel.duration, onEditingChanged: { editing in
+//                if editing {
+//                    musicViewModel.sliderEditing = editing
+//                }
+//                if !editing {
+//                    musicManager.skipTo(musicViewModel.currentMusicTime)
+//                    DispatchQueue.global().asyncAfter(deadline: .now() + 0.3) {
+//                        musicViewModel.sliderEditing = false
+//                    }
+//                }
+//            })
+//            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+//            HStack {
+//                Text(musicViewModel.currentMusicTimeString)
+//                    .padding(.top, -20)
+//                    .font(.callout)
+//                    .foregroundColor(Color.gray)
+//                Spacer()
+//                Text(musicViewModel.remainingMusicTimeString)
+//                    .padding(.top, -20)
+//                    .font(.callout)
+//                    .foregroundColor(Color.gray)
+//            }
+//            .padding()
         }
     }
     

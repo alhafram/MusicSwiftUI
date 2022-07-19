@@ -16,7 +16,6 @@ class MusicViewModel: ObservableObject {
     @Published var cancelable = Set<AnyCancellable>()
     @Published var duration: TimeInterval = 0
     @Published var sliderEditing = false
-    lazy var currentMusicTime = musicManager?.playbackTime ?? 0
     
     private var song: Song? {
         didSet {
@@ -26,13 +25,13 @@ class MusicViewModel: ObservableObject {
     
     var musicManager: MusicManager!
     
-    var currentMusicTimeString: String {
-        currentMusicTime.positionalTime
-    }
-    
-    var remainingMusicTimeString: String {
-        (duration - currentMusicTime).positionalTime
-    }
+//    var currentMusicTimeString: String {
+//        currentMusicTime.positionalTime
+//    }
+//    
+//    var remainingMusicTimeString: String {
+//        (duration - currentMusicTime).positionalTime
+//    }
     
     func setup(musicManager: MusicManager) {
         self.musicManager = musicManager

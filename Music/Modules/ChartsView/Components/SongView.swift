@@ -1,5 +1,5 @@
 //
-//  MusicVideoView.swift
+//  SongView.swift
 //  Music
 //
 //  Created by Albert on 15.07.2022.
@@ -7,34 +7,17 @@
 
 import SwiftUI
 
-struct MusicVideoView: View {
+struct SongView: View {
     
     @State var item: ChartViewModelItem
     
-    private let imageSize: CGFloat = 300
+    private let imageSize: CGFloat = 200
     
     private var backgroundImageUrl: URL? {
-        item.artwork?.url(width: item.artwork?.maximumWidth ?? 0, height: item.artwork?.maximumWidth ?? 0)
+        item.artwork?.url(width: Int(imageSize), height: Int(imageSize))
     }
-    
-    private var titleView: some View {
-        VStack(alignment: .leading) {
-            Text(item.title)
-                .multilineTextAlignment(.leading)
-                .lineLimit(1)
-                .foregroundColor(Color.gray)
-                .font(.body)
-            Text(item.artistName)
-                .multilineTextAlignment(.leading)
-                .lineLimit(1)
-                .foregroundColor(Color.gray)
-                .font(.subheadline)
-        }
-        .frame(width: imageSize, alignment: .leading)
-    }
-    
     private var backgroundImageView: some View {
-        VStack {}
+        return VStack {}
             .frame(width: imageSize, height: imageSize)
             .background {
                 CachedAsyncImage(url: backgroundImageUrl) { image in
@@ -47,6 +30,14 @@ struct MusicVideoView: View {
                 .frame(width: imageSize, height: imageSize)
                 .cornerRadius(12)
             }
+    }
+    
+    private var titleView: some View {
+        Text(item.title)
+            .font(.system(size: 16, weight: .semibold))
+            .lineLimit(1)
+            .foregroundColor(Color.gray)
+            .frame(maxWidth: 200, alignment: .leading)
     }
     
     var body: some View {

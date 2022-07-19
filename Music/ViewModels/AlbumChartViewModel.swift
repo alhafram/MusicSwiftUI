@@ -8,11 +8,28 @@
 import Foundation
 import MusicKit
 
-struct ChartViewModelItem: Hashable, Identifiable {
+protocol MyMusicItem {
+    
+}
+extension Song: MyMusicItem {}
+extension Playlist: MyMusicItem {}
+extension Album: MyMusicItem {}
+extension MusicVideo: MyMusicItem {}
+
+struct ChartViewModelItem: Hashable, Identifiable, Equatable {
     var id = UUID()
     var artistName = ""
     var title: String
     var artwork: Artwork?
+    var item: MyMusicItem
+    
+    static func == (lhs: ChartViewModelItem, rhs: ChartViewModelItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
 class ChartViewModel<T>: ObservableObject, Identifiable where T: MusicCatalogChartRequestable {
@@ -30,22 +47,22 @@ class ChartViewModel<T>: ObservableObject, Identifiable where T: MusicCatalogCha
         self.title = chart.title
         self.items = []
         self.batcher = chart.items
-        self.items = parse(chart.items)
+        self.items = parseItems()
     }
     
-    func parse(_ collection:  MusicItemCollection<T>) -> [ChartViewModelItem] {
-        let chartViewModelItems = collection.compactMap {
+    func parseItems() -> [ChartViewModelItem] {
+        let chartViewModelItems = batcher.compactMap {
             if let album = $0 as? Album {
-                return ChartViewModelItem(artistName: album.artistName, title: album.title, artwork: album.artwork)
+                return ChartViewModelItem(artistName: album.artistName, title: album.title, artwork: album.artwork, item: album)
             }
             if let playlist = $0 as? Playlist {
-                return ChartViewModelItem(title: playlist.name, artwork: playlist.artwork)
+                return ChartViewModelItem(title: playlist.name, artwork: playlist.artwork, item: playlist)
             }
             if let musicVideo = $0 as? MusicVideo {
-                return ChartViewModelItem(artistName: musicVideo.artistName, title: musicVideo.title, artwork: musicVideo.artwork)
+                return ChartViewModelItem(artistName: musicVideo.artistName, title: musicVideo.title, artwork: musicVideo.artwork, item: musicVideo)
             }
             if let song = $0 as? Song {
-                return ChartViewModelItem(artistName: song.artistName, title: song.title, artwork: song.artwork)
+                return ChartViewModelItem(artistName: song.artistName, title: song.title, artwork: song.artwork, item: song)
             }
             return nil
         }
