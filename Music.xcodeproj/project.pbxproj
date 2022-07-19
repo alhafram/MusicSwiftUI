@@ -33,7 +33,7 @@
 		50D464922879D3E8001D4829 /* MusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464912879D3E8001D4829 /* MusicUITestsLaunchTests.swift */; };
 		50D464A22879D608001D4829 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A12879D608001D4829 /* ChartsView.swift */; };
 		50D464A42879D623001D4829 /* RecentlyPlayedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A32879D623001D4829 /* RecentlyPlayedView.swift */; };
-		50D464A62879D663001D4829 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A52879D663001D4829 /* RadioView.swift */; };
+		50D464A62879D663001D4829 /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A52879D663001D4829 /* RecommendationsView.swift */; };
 		50D464A82879D683001D4829 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D464A72879D683001D4829 /* LibraryView.swift */; };
 		50FC57EB2880089000CFB000 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC57EA2880089000CFB000 /* MusicManager.swift */; };
 		50FC57EF28801A2100CFB000 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FC57EE28801A2100CFB000 /* Utils.swift */; };
@@ -89,7 +89,7 @@
 		50D464912879D3E8001D4829 /* MusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		50D464A12879D608001D4829 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		50D464A32879D623001D4829 /* RecentlyPlayedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyPlayedView.swift; sourceTree = "<group>"; };
-		50D464A52879D663001D4829 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		50D464A52879D663001D4829 /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsView.swift; sourceTree = "<group>"; };
 		50D464A72879D683001D4829 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		50FC57EA2880089000CFB000 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		50FC57EE28801A2100CFB000 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 				50D464A32879D623001D4829 /* RecentlyPlayedView.swift */,
 				50D464A72879D683001D4829 /* LibraryView.swift */,
 				50855B16288090B2004A925B /* MusicView */,
-				50D464A52879D663001D4829 /* RadioView.swift */,
+				50D464A52879D663001D4829 /* RecommendationsView.swift */,
 				504559B1287AA9A200DA6569 /* ChartsView */,
 			);
 			path = Modules;
@@ -415,7 +415,7 @@
 			files = (
 				50D464A22879D608001D4829 /* ChartsView.swift in Sources */,
 				502F8D222881B37A0027E2FF /* MusicAPIManager.swift in Sources */,
-				50D464A62879D663001D4829 /* RadioView.swift in Sources */,
+				50D464A62879D663001D4829 /* RecommendationsView.swift in Sources */,
 				50A4B10A287FFC71001F2D4E /* MainTabView.swift in Sources */,
 				50855B18288090BD004A925B /* MusicViewModel.swift in Sources */,
 				50D464782879D3E8001D4829 /* Persistence.swift in Sources */,

@@ -32,7 +32,7 @@ struct MainTabView: View {
                 }
                 .environmentObject(router)
                 .tag(1)
-            RadioView()
+            RecommendationsView()
                 .onAppear {
                     selection = 2
                 }
@@ -48,40 +48,45 @@ struct MainTabView: View {
                     Label("Library", systemImage: "music.note.list")
                 }
                 .tag(3)
+                .accentColor(Color.red)
         }
         
         .overlay(alignment: .bottom) {
-            if router.showMusicBar {
-                HStack {
-                    VStack {
-                        
-                    }
-                    .frame(width: 50, height: 50)
-                    .background(.red)
-                    .cornerRadius(4)
-                    .padding()
-                    Text("Some song name")
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "pause")
-                    }
-                    .padding()
-                    Button {
-                        print("Backward")
-                    } label: {
-                        Image(systemName: "forward")
-                    }
-                    .padding()
-                }
-                .frame(width: UIScreen.main.bounds.width, height: 70)
-                .background(.gray)
-                .foregroundColor(.white)
-                .padding(.bottom, 49)
-            }
+            musicBar
         }
-        .accentColor(Color.red)
+    }
+    
+    @ViewBuilder
+    var musicBar: some View {
+        if router.showMusicBar {
+            HStack {
+                VStack {
+                    
+                }
+                .frame(width: 50, height: 50)
+                .background(.red)
+                .cornerRadius(4)
+                .padding()
+                Text("Some song name")
+                Spacer()
+                Button {
+                    
+                } label: {
+                    Image(systemName: "pause")
+                }
+                .padding()
+                Button {
+                    print("Backward")
+                } label: {
+                    Image(systemName: "forward")
+                }
+                .padding()
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 70)
+            .background(.gray)
+            .foregroundColor(.white)
+            .padding(.bottom, 49)
+        }
     }
 }
 

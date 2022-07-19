@@ -12,7 +12,7 @@ struct PlaylistSectionView: View {
     @EnvironmentObject private var chartsProvider: ChartsProvider
     @EnvironmentObject private var router: Router
     
-    @StateObject var viewModel: PlaylistChartViewModel
+    @ObservedObject var viewModel: PlaylistChartViewModel
     
     var title: some View {
         Text(viewModel.title)

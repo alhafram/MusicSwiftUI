@@ -65,7 +65,7 @@ struct AlbumView: View {
             footerView
         }
         .onTapGesture {
-            router.showMusicBar.toggle()
+            
         }
     }
 }

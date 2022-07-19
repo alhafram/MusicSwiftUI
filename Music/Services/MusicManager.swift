@@ -22,7 +22,7 @@ class MusicManager: ObservableObject {
         mediaPlayer.playbackTime
     }
     
-    func authorize() async -> MusicAuthorization.Status {
+    static func getAuthorizationStatus() async -> MusicAuthorization.Status {
         return await MusicAuthorization.request()
     }
     

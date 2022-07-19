@@ -11,7 +11,8 @@ struct AlbumSectionView: View {
     
     @EnvironmentObject private var chartsProvider: ChartsProvider
     @EnvironmentObject private var router: Router
-    @StateObject var viewModel: AlbumChartViewModel
+    
+    @ObservedObject var viewModel: AlbumChartViewModel
     
     var title: some View {
         Text(viewModel.title)

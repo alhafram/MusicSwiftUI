@@ -10,15 +10,14 @@ import MusicKit
 
 struct MainView: View {
     
-    @ObservedObject private var router = Router()
-    @ObservedObject private var musicManager = MusicManager()
+    @StateObject private var router = Router()
+    @StateObject private var musicManager = MusicManager()
     
     var body: some View {
         switch router.route {
         case .launchScreen:
             LaunchScreenView()
                 .environmentObject(router)
-                .environmentObject(musicManager)
         case .mainScreen:
             MainTabView()
                 .environmentObject(router)

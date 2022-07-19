@@ -9,11 +9,10 @@ import SwiftUI
 
 struct LaunchScreenView: View {
     
-    @EnvironmentObject var router: Router
-    @EnvironmentObject var musicManager: MusicManager
+    @EnvironmentObject private var router: Router
     
-    @State var showSettingsButton = false
-    @State var animating = true
+    @State private var showSettingsButton = false
+    @State private var animating = true
     @State private var blinking: Bool = false
     
     var foreverAnimation: Animation {
@@ -50,7 +49,7 @@ struct LaunchScreenView: View {
         }
         .task {
             try? await Task.sleep(seconds: 1)
-            let status = await musicManager.authorize()
+            let status = await MusicManager.getAuthorizationStatus()
             switch status {
             case .notDetermined:
                 break
