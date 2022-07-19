@@ -8,9 +8,7 @@
 import Foundation
 import MusicKit
 
-protocol MyMusicItem {
-    
-}
+protocol MyMusicItem {}
 extension Song: MyMusicItem {}
 extension Playlist: MyMusicItem {}
 extension Album: MyMusicItem {}

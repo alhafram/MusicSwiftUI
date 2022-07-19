@@ -7,64 +7,97 @@
 
 import SwiftUI
 
+class MusicBasProgress: ObservableObject {
+    @Published var progressWidth: CGFloat = 0
+}
+
 struct MusicBar: View {
     
     @EnvironmentObject var musicManager: MusicManager
-    
-    @State private var _prevvProgressWidth: CGFloat = 0
+    @State var progress = MusicBasProgress()
     
     private var progressWidth: CGFloat {
+        if musicManager.musicDuration == 0 || musicManager.status == .stopped {
+            progress.progressWidth = 0
+            return 0
+        }
         let newValue = (musicManager.playbackTime / musicManager.musicDuration) * 150
-        if musicManager.status == .playing {
-            _prevvProgressWidth = newValue
+        if musicManager.status == .paused && Int(newValue) == 0 {
+            return progress.progressWidth
+        }
+        if musicManager.status == .playing || musicManager.status == .paused {
+            progress.progressWidth = newValue
             return newValue
         } else {
-            return _prevvProgressWidth
+            return progress.progressWidth
         }
+    }
+    
+    private var imageView: some View {
+        CachedAsyncImage(url: musicManager.songIconUrl) { phase in
+            phase.image?.resizable()
+                .frame(width: 50, height: 50)
+                .cornerRadius(4)
+                .padding()
+        }
+    }
+    
+    private var progressView: some View {
+        ZStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 5)
+                .frame(width: 150, height: 10)
+                .padding(.bottom, 10)
+            RoundedRectangle(cornerRadius: 5)
+                .fill(.red)
+                .background(in: Circle(), fillStyle: FillStyle.init())
+                .frame(width: 150, height: 10)
+                .offset(x: -150 + progressWidth)
+                .mask({
+                    RoundedRectangle(cornerRadius: 5)
+                })
+                .clipped()
+                .padding(.bottom, 10)
+        }
+    }
+    
+    private var playPauseButton: some View {
+        Button {
+            if musicManager.status == .playing {
+                musicManager.pause()
+            }
+            if musicManager.status == .paused || musicManager.status == .stopped {
+                Task {
+                    await musicManager.resume()
+                }
+            }
+        } label: {
+            Image(systemName: musicManager.status == .playing ? "pause" : "play")
+                .bold()
+        }
+        .padding()
+    }
+    
+    private var forwardButton: some View {
+        Button {
+            print("Next song")
+        } label: {
+            Image(systemName: "forward")
+                .bold()
+        }
+        .padding(.trailing, 20)
     }
     
     var body: some View {
         HStack {
-            VStack { }
-            .frame(width: 50, height: 50)
-            .background {
-                CachedAsyncImage(url: musicManager.songIconUrl)
-            }
-            .cornerRadius(4)
-            .padding()
+            imageView
             VStack(alignment: .leading) {
                 Text(musicManager.songTitle)
                     .padding(.top, 15)
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 5)
-                        .frame(width: 150, height: 10)
-                        .padding(.bottom, 10)
-                    RoundedRectangle(cornerRadius: 5)
-                        .fill(.red)
-                        .frame(width: progressWidth, height: 10)
-                        .padding(.bottom, 10)
-                }
+                progressView
             }
             Spacer()
-            Button {
-                if musicManager.status == .playing {
-                    musicManager.pause()
-                }
-                if musicManager.status == .paused {
-                    Task {
-                        await musicManager.resume()
-                    }
-                }
-            } label: {
-                Image(systemName: musicManager.status == .playing ? "pause" : "play")
-            }
-            .padding()
-            Button {
-                print("Backward")
-            } label: {
-                Image(systemName: "forward")
-            }
-            .padding()
+            playPauseButton
+            forwardButton
         }
         .frame(width: UIScreen.main.bounds.width, height: 70)
         .background(.gray)
@@ -79,4 +112,3 @@ struct MusicBar_Previews: PreviewProvider {
             .environmentObject(MusicManager())
     }
 }
-

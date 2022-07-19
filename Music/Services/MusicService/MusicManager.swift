@@ -18,38 +18,64 @@ class MusicManager: ObservableObject {
     @Published var songIconUrl: URL?
     @Published var status: MusicPlayer.PlaybackStatus = .stopped
     @Published var playbackTime: TimeInterval = 0.0
+    private var timer: Timer?
     
     static func getAuthorizationStatus() async -> MusicAuthorization.Status {
         return await MusicAuthorization.request()
     }
-    
-    let currentTimePublisher = CurrentValueSubject<TimeInterval, Never>(0)
     
     private var store = Set<AnyCancellable>()
     private var mediaPlayer: ApplicationMusicPlayer {
         ApplicationMusicPlayer.shared
     }
     
+    func setupMusicItem(_ musicItem: MyMusicItem) async -> Bool {
+        if let song = self.musicItem as? Song {
+            let newSong = musicItem as? Song
+            if song == newSong {
+                return false
+            }
+        }
+        self.musicItem = musicItem
+        return true
+    }
+    
     func startObserving() {
-        $musicItem.sink { item in
+        $musicItem.sink { [weak self] item in
+            guard let self = self else { return }
             guard let item = item else { return }
+            let currentSong = self.musicItem as? Song
             if let song = item as? Song {
+                if song == currentSong {
+                    return
+                }
+                self.playbackTime = 0
                 self.songTitle = song.title
                 self.songIconUrl = song.artwork?.url(width: 50, height: 50)
                 self.musicDuration = song.duration ?? 0
-                Task {
-                    try await self.play(song: song)
-                }
+                self.mediaPlayer.playbackTime = 0
             }
-            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [self] timer in
-                if musicItem == nil {
-                    timer.invalidate()
-                }
-                status = mediaPlayer.state.playbackStatus
-                playbackTime = mediaPlayer.playbackTime
+            
+            self.timer?.invalidate()
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { [weak self] timer in
+                guard let self = self else { return }
+                self.playbackTime = self.mediaPlayer.playbackTime
             }
         }
         .store(in: &store)
+        
+        mediaPlayer.state.objectWillChange.sink { [weak self] _ in
+            guard let self = self else { return }
+            self.status = self.mediaPlayer.state.playbackStatus
+        }
+        .store(in: &store)
+    }
+    
+    func play() {
+        guard let song = musicItem as? Song else { return }
+        Task {
+            try await self.play(song: song)
+        }
     }
     
     func get() {
@@ -160,8 +186,17 @@ class MusicManager: ObservableObject {
         mediaPlayer.pause()
     }
     
+    private func prepareToPlay() async throws {
+        if mediaPlayer.queue.entries.count == 0 {
+            guard let song = musicItem as? Song else { return }
+            mediaPlayer.queue = [song]
+        }
+        try await mediaPlayer.prepareToPlay()
+    }
+    
     func resume() async {
         Task {
+            try await prepareToPlay()
             try await mediaPlayer.play()
         }
     }

@@ -61,7 +61,12 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
                     await nextFetch(item: item)
                 }
                 .onTapGesture {
-                    musicManager.musicItem = item.item
+                    Task {
+                        let result = await musicManager.setupMusicItem(item.item)
+                        if result {
+                            musicManager.play()
+                        }
+                    }
                 }
         }
     }
