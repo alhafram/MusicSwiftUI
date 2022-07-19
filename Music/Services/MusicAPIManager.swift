@@ -9,21 +9,40 @@ import Foundation
 import MusicKit
 
 protocol MusicAPI {
-    func getCharts() async throws -> ([AlbumChartViewModel], [PlaylistChartViewModel], [MusicVideoChartViewModel])
+    func getCharts() async throws -> Charts
+}
+
+struct Charts {
+    var albumCharts: [MusicCatalogChart<Album>]
+    var playlistCharts: [MusicCatalogChart<Playlist>]
+    var musicVideoCharts: [MusicCatalogChart<MusicVideo>]
+    var songsCharts: [MusicCatalogChart<Song>]
 }
 
 struct MusicAPIManager: MusicAPI {
     
-    func getCharts() async throws -> ([AlbumChartViewModel], [PlaylistChartViewModel], [MusicVideoChartViewModel]) {
+    func getCharts() async throws -> Charts {
         let task = Task {
             let request = MusicCatalogChartsRequest(kinds: [.cityTop, .dailyGlobalTop, .mostPlayed], types: [Album.self, Playlist.self, MusicVideo.self, Song.self])
             let respone = try await request.response()
-            let albumChartViewModels = respone.albumCharts.map { AlbumChartViewModel(albumChart: $0) }
-            let playlistChartViewModels = respone.playlistCharts.map { PlaylistChartViewModel(playlistChart: $0) }
-            let musicViewoChartViewModels = respone.musicVideoCharts.map { MusicVideoChartViewModel(musicVideoChart: $0) }
-            
-            return (albumChartViewModels, playlistChartViewModels, musicViewoChartViewModels)
+            return Charts(albumCharts: respone.albumCharts,
+                          playlistCharts: respone.playlistCharts,
+                          musicVideoCharts: respone.musicVideoCharts,
+                          songsCharts: respone.songCharts)
         }
         return try await task.result.get()
     }
+    
+    func fetchNext<T: MusicCatalogChartRequestable>(batcher: inout MusicItemCollection<T>, next: Int = 10) async throws {
+        if batcher.hasNextBatch {
+            guard let batchResponse = try await batcher.nextBatch(limit: next) else {
+                throw MusicAPIError.fetchError
+            }
+            batcher = batchResponse
+        }
+    }
+}
+
+enum MusicAPIError: Error {
+    case fetchError
 }

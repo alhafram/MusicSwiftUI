@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		502F8D19288172060027E2FF /* AlbumSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D18288172060027E2FF /* AlbumSectionView.swift */; };
+		502F8D19288172060027E2FF /* MusicSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D18288172060027E2FF /* MusicSectionView.swift */; };
 		502F8D1B288178550027E2FF /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D1A288178550027E2FF /* AlbumView.swift */; };
 		502F8D1D288180910027E2FF /* ChartsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D1C288180910027E2FF /* ChartsProvider.swift */; };
 		502F8D1F28819C7B0027E2FF /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D1E28819C7B0027E2FF /* CachedAsyncImage.swift */; };
 		502F8D222881B37A0027E2FF /* MusicAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D212881B37A0027E2FF /* MusicAPIManager.swift */; };
 		502F8D252881B3D40027E2FF /* AlbumChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D242881B3D40027E2FF /* AlbumChartViewModel.swift */; };
-		502F8D272881EC610027E2FF /* PlaylistSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D262881EC610027E2FF /* PlaylistSectionView.swift */; };
 		502F8D292881ECAF0027E2FF /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F8D282881ECAF0027E2FF /* PlaylistView.swift */; };
 		504559BE287B033C00DA6569 /* AppleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BD287B033C00DA6569 /* AppleLogoView.swift */; };
-		506B668E2882CB370054A4CA /* MusicVideoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506B668D2882CB370054A4CA /* MusicVideoSectionView.swift */; };
 		506B66902882CB640054A4CA /* MusicVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506B668F2882CB640054A4CA /* MusicVideoView.swift */; };
 		50855B18288090BD004A925B /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50855B17288090BD004A925B /* MusicViewModel.swift */; };
 		50A4B106287FED2E001F2D4E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4B105287FED2E001F2D4E /* LaunchScreenView.swift */; };
@@ -58,17 +56,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		502F8D18288172060027E2FF /* AlbumSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSectionView.swift; sourceTree = "<group>"; };
+		502F8D18288172060027E2FF /* MusicSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSectionView.swift; sourceTree = "<group>"; };
 		502F8D1A288178550027E2FF /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		502F8D1C288180910027E2FF /* ChartsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsProvider.swift; sourceTree = "<group>"; };
 		502F8D1E28819C7B0027E2FF /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		502F8D212881B37A0027E2FF /* MusicAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAPIManager.swift; sourceTree = "<group>"; };
 		502F8D242881B3D40027E2FF /* AlbumChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumChartViewModel.swift; sourceTree = "<group>"; };
-		502F8D262881EC610027E2FF /* PlaylistSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSectionView.swift; sourceTree = "<group>"; };
 		502F8D282881ECAF0027E2FF /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
 		504559B8287AE91700DA6569 /* Music.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Music.entitlements; sourceTree = "<group>"; };
 		504559BD287B033C00DA6569 /* AppleLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogoView.swift; sourceTree = "<group>"; };
-		506B668D2882CB370054A4CA /* MusicVideoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoSectionView.swift; sourceTree = "<group>"; };
 		506B668F2882CB640054A4CA /* MusicVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoView.swift; sourceTree = "<group>"; };
 		50855B17288090BD004A925B /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
 		50A4B105287FED2E001F2D4E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
@@ -151,9 +147,7 @@
 		504FD83F287F11ED00988D8C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				502F8D18288172060027E2FF /* AlbumSectionView.swift */,
-				506B668D2882CB370054A4CA /* MusicVideoSectionView.swift */,
-				502F8D262881EC610027E2FF /* PlaylistSectionView.swift */,
+				502F8D18288172060027E2FF /* MusicSectionView.swift */,
 				502F8D282881ECAF0027E2FF /* PlaylistView.swift */,
 				506B668F2882CB640054A4CA /* MusicVideoView.swift */,
 				502F8D1A288178550027E2FF /* AlbumView.swift */,
@@ -424,12 +418,10 @@
 				502F8D292881ECAF0027E2FF /* PlaylistView.swift in Sources */,
 				50D464A82879D683001D4829 /* LibraryView.swift in Sources */,
 				50A4B106287FED2E001F2D4E /* LaunchScreenView.swift in Sources */,
-				502F8D19288172060027E2FF /* AlbumSectionView.swift in Sources */,
+				502F8D19288172060027E2FF /* MusicSectionView.swift in Sources */,
 				506B66902882CB640054A4CA /* MusicVideoView.swift in Sources */,
 				50A4B108287FED75001F2D4E /* Router.swift in Sources */,
 				50D4646F2879D3E7001D4829 /* MusicApp.swift in Sources */,
-				502F8D272881EC610027E2FF /* PlaylistSectionView.swift in Sources */,
-				506B668E2882CB370054A4CA /* MusicVideoSectionView.swift in Sources */,
 				50FC57EF28801A2100CFB000 /* Utils.swift in Sources */,
 				50FC57EB2880089000CFB000 /* MusicManager.swift in Sources */,
 				502F8D1B288178550027E2FF /* AlbumView.swift in Sources */,

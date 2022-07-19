@@ -8,101 +8,55 @@
 import Foundation
 import MusicKit
 
-class AlbumChartViewModel: ObservableObject, Identifiable {
+struct ChartViewModelItem: Hashable, Identifiable {
+    var id = UUID()
+    var artistName = ""
+    var title: String
+    var artwork: Artwork?
+}
+
+class ChartViewModel<T>: ObservableObject, Identifiable where T: MusicCatalogChartRequestable {
     
-    @Published var items: [Item]
+    @Published var items: [ChartViewModelItem]
     
     let title: String
-    var batcher: MusicItemCollection<Album>
+    var batcher: MusicItemCollection<T>
     
-    init(albumChart: MusicCatalogChart<Album>) {
-        self.title = albumChart.title
-        self.items = albumChart.items.map {
-            Item(artistName: $0.artistName, title: $0.title, artwork: $0.artwork)
+    var type: T.Type {
+        return T.self
+    }
+    
+    init(chart: MusicCatalogChart<T>) {
+        self.title = chart.title
+        self.items = []
+        self.batcher = chart.items
+        self.items = parse(chart.items)
+    }
+    
+    func parse(_ collection:  MusicItemCollection<T>) -> [ChartViewModelItem] {
+        let chartViewModelItems = collection.compactMap {
+            if let album = $0 as? Album {
+                return ChartViewModelItem(artistName: album.artistName, title: album.title, artwork: album.artwork)
+            }
+            if let playlist = $0 as? Playlist {
+                return ChartViewModelItem(title: playlist.name, artwork: playlist.artwork)
+            }
+            if let musicVideo = $0 as? MusicVideo {
+                return ChartViewModelItem(artistName: musicVideo.artistName, title: musicVideo.title, artwork: musicVideo.artwork)
+            }
+            if let song = $0 as? Song {
+                return ChartViewModelItem(artistName: song.artistName, title: song.title, artwork: song.artwork)
+            }
+            return nil
         }
-        self.batcher = albumChart.items
+        return chartViewModelItems
     }
     
-    func updateBatcher(_ batcher: MusicItemCollection<Album>) {
-        self.batcher = batcher
-    }
-    
-    func addItems(_ items: [Item]) {
+    func addItems(_ items: [ChartViewModelItem]) {
         self.items.append(contentsOf: items)
     }
-}
-
-extension AlbumChartViewModel {
-    struct Item: Hashable, Identifiable {
-        var id = UUID()
-        var artistName: String
-        var title: String
-        var artwork: Artwork?
-    }
-}
-
-class PlaylistChartViewModel: ObservableObject, Identifiable {
     
-    @Published var items: [Item]
-    
-    let title: String
-    var batcher: MusicItemCollection<Playlist>
-    
-    init(playlistChart: MusicCatalogChart<Playlist>) {
-        self.title = playlistChart.title
-        self.items = playlistChart.items.map {
-            Item(title: $0.name, artwork: $0.artwork)
-        }
-        self.batcher = playlistChart.items
-    }
-    
-    func updateBatcher(_ batcher: MusicItemCollection<Playlist>) {
-        self.batcher = batcher
-    }
-    
-    func addItems(_ items: [Item]) {
-        self.items.append(contentsOf: items)
-    }
-}
-
-extension PlaylistChartViewModel {
-    struct Item: Hashable, Identifiable {
-        var id = UUID()
-        var title: String
-        var artwork: Artwork?
-    }
-}
-
-
-class MusicVideoChartViewModel: ObservableObject, Identifiable {
-    
-    @Published var items: [Item]
-    
-    let title: String
-    var batcher: MusicItemCollection<MusicVideo>
-    
-    init(musicVideoChart: MusicCatalogChart<MusicVideo>) {
-        self.title = musicVideoChart.title
-        self.items = musicVideoChart.items.map {
-            Item(artistName: $0.artistName, title: $0.title, artwork: $0.artwork)
-        }
-        self.batcher = musicVideoChart.items
-    }
-    
-    func updateBatcher(_ batcher: MusicItemCollection<MusicVideo>) {
-        self.batcher = batcher
-    }
-    
-    func addItems(_ items: [Item]) {
-        self.items.append(contentsOf: items)
-    }
-}
-
-extension MusicVideoChartViewModel {
-    struct Item: Hashable, Identifiable {
-        var id = UUID()
-        var artistName: String
-        var title: String
-        var artwork: Artwork?
+    func prefetchingLimit(from viewModel: ChartViewModelItem) -> Int {
+        return items.count - 10
     }
 }

@@ -11,7 +11,7 @@ struct PlaylistView: View {
     
     @EnvironmentObject private var router: Router
     
-    @State var item: PlaylistChartViewModel.Item
+    @State var item: ChartViewModelItem
     
     private let imageSize: CGFloat = 200
     
@@ -52,6 +52,6 @@ struct PlaylistView: View {
 
 struct PlaylistView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaylistView(item: PlaylistChartViewModel.Item(title: ""))
+        PlaylistView(item: ChartViewModelItem(title: ""))
     }
 }

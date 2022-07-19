@@ -21,19 +21,23 @@ struct ChartsView: View {
             NavigationView {
                 ScrollView {
                     VStack(alignment: .leading) {
-                        ForEach(chartsProvider.albumChartViewModels) { albumChartViewModel in
-                            AlbumSectionView(viewModel: albumChartViewModel)
+                        ForEach(chartsProvider.albumChartViewModels) { viewModel in
+                            MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
                                 .environmentObject(router)
                         }
-                        ForEach(chartsProvider.playlistChartViewModels) { playlistChartViewModel in
-                            PlaylistSectionView(viewModel: playlistChartViewModel)
+                        ForEach(chartsProvider.playlistChartViewModels) { viewModel in
+                            MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
                                 .environmentObject(router)
                         }
-                        
-                        ForEach(chartsProvider.musicVideoChartViewModels) { musicVideoChartViewModel in
-                            MusicVideoSectionView(viewModel: musicVideoChartViewModel)
+                        ForEach(chartsProvider.musicVideoChartViewModels) { viewModel in
+                            MusicSectionView(viewModel: viewModel)
+                                .environmentObject(chartsProvider)
+                                .environmentObject(router)
+                        }
+                        ForEach(chartsProvider.songChartViewModels) { viewModel in
+                            MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
                                 .environmentObject(router)
                         }
@@ -62,5 +66,6 @@ struct ChartsView: View {
 struct ListenNowView_Previews: PreviewProvider {
     static var previews: some View {
         ChartsView()
+            .environmentObject(Router())
     }
 }

@@ -11,7 +11,7 @@ struct AlbumView: View {
     
     @EnvironmentObject private var router: Router
     
-    @State var item: AlbumChartViewModel.Item
+    @State var item: ChartViewModelItem
     
     private let imageSize: CGFloat = 300
     
@@ -70,8 +70,8 @@ struct AlbumView: View {
     }
 }
 
-struct AlbumView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlbumView(item: AlbumChartViewModel.Item(artistName: "", title: ""))
-    }
-}
+//struct AlbumView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AlbumView(item: AlbumChartViewModel.Item(artistName: "", title: ""))
+//    }
+//}
