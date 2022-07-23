@@ -11,8 +11,7 @@ import MusicKit
 
 struct MainTabView: View {
     
-    @StateObject private var musicManager = MusicManager()
-    @EnvironmentObject private var router: Router
+    @EnvironmentObject private var musicManager: MusicManager
     @AppStorage("selection") private var selection = 0
     
     @State private var store = Set<AnyCancellable>()
@@ -31,8 +30,6 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Top Charts", systemImage: "chart.line.uptrend.xyaxis")
                 }
-                .environmentObject(router)
-                .environmentObject(musicManager)
                 .tag(0)
             RecentlyPlayedView()
                 .onAppear {
@@ -41,7 +38,6 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Recently played", systemImage: "arrow.counterclockwise.circle")
                 }
-                .environmentObject(router)
                 .tag(1)
             RecommendationsView()
                 .onAppear {
@@ -81,7 +77,6 @@ struct MainTabView: View {
         .overlay(alignment: .bottom) {
             if musicManager.musicItem != nil {
                 MusicBar()
-                    .environmentObject(musicManager)
             }
         }
     }

@@ -11,7 +11,6 @@ import MusicKit
 struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
     
     @EnvironmentObject private var chartsProvider: ChartsProvider
-    @EnvironmentObject private var router: Router
     @EnvironmentObject private var musicManager: MusicManager
     
     @ObservedObject var viewModel: ChartViewModel<T>

@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct RecentlyPlayedView: View {
-    
-    @EnvironmentObject private var router: Router
-    
     var body: some View {
         NavigationView {
             VStack {

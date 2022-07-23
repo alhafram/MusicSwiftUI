@@ -21,6 +21,7 @@ struct MainView: View {
         case .mainScreen:
             MainTabView()
                 .environmentObject(router)
+                .environmentObject(musicManager)
         }
     }
 }

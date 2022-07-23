@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ChartsView: View {
     
-    @EnvironmentObject private var router: Router
     @EnvironmentObject private var musicManager: MusicManager
     
-    @StateObject var chartsProvider = ChartsProvider()
+    @StateObject private var chartsProvider = ChartsProvider()
     
     @ViewBuilder
     func getContentView() -> some View {
@@ -26,26 +25,18 @@ struct ChartsView: View {
                         ForEach(chartsProvider.albumChartViewModels) { viewModel in
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
-                                .environmentObject(router)
-                                .environmentObject(musicManager)
                         }
                         ForEach(chartsProvider.playlistChartViewModels) { viewModel in
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
-                                .environmentObject(router)
-                                .environmentObject(musicManager)
                         }
                         ForEach(chartsProvider.musicVideoChartViewModels) { viewModel in
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
-                                .environmentObject(router)
-                                .environmentObject(musicManager)
                         }
                         ForEach(chartsProvider.songChartViewModels) { viewModel in
                             MusicSectionView(viewModel: viewModel)
                                 .environmentObject(chartsProvider)
-                                .environmentObject(router)
-                                .environmentObject(musicManager)
                         }
                         if musicManager.musicItem != nil {
                             Text("")
