@@ -15,6 +15,8 @@ struct MainTabView: View {
     @EnvironmentObject private var router: Router
     @AppStorage("selection") private var selection = 0
     
+    @State private var store = Set<AnyCancellable>()
+    
     private var song: Song? {
         guard let data = UserDefaults.standard.data(forKey: "song") else { return nil }
         return try? JSONDecoder().decode(Song.self, from: data)
@@ -61,14 +63,20 @@ struct MainTabView: View {
         }
         .onAppear {
             musicManager.startObserving()
-            musicManager.musicItem = song
+            guard let song else { return }
+            musicManager.musicItem = MusicConfig(item: song, play: false)
         }
         .onReceive(musicManager.$musicItem, perform: { output in
-            guard let item = output.map({ $0 }) as? Song,
-                  let decodedItem = try? JSONEncoder().encode(item) else {
-                return
-            }
-            UserDefaults.standard.set(decodedItem, forKey: "song")
+            output.publisher
+                .compactMap { config -> Data? in
+                    let song = config.item as? Song
+                    let data = try? JSONEncoder().encode(song)
+                    return data
+                }
+                .sink { data in
+                    UserDefaults.standard.set(data, forKey: "song")
+                }
+                .store(in: &store)
         })
         .overlay(alignment: .bottom) {
             if musicManager.musicItem != nil {

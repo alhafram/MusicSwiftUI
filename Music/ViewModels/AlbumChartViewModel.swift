@@ -8,18 +8,12 @@
 import Foundation
 import MusicKit
 
-protocol MyMusicItem {}
-extension Song: MyMusicItem {}
-extension Playlist: MyMusicItem {}
-extension Album: MyMusicItem {}
-extension MusicVideo: MyMusicItem {}
-
 struct ChartViewModelItem: Hashable, Identifiable, Equatable {
     var id = UUID()
     var artistName = ""
     var title: String
     var artwork: Artwork?
-    var item: MyMusicItem
+    var item: MusicItem
     
     static func == (lhs: ChartViewModelItem, rhs: ChartViewModelItem) -> Bool {
         return lhs.id == rhs.id

@@ -92,7 +92,7 @@ struct MusicView: View {
                         musicManager.pause()
                     } else {
                         Task {
-                            await musicManager.resume()
+                            try await musicManager.start()
                         }
                     }
                     isPlaying.toggle()

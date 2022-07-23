@@ -61,12 +61,7 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
                     await nextFetch(item: item)
                 }
                 .onTapGesture {
-                    Task {
-                        let result = await musicManager.setupMusicItem(item.item)
-                        if result {
-                            musicManager.play()
-                        }
-                    }
+                    musicManager.musicItem = MusicConfig(item: item.item, play: true)
                 }
         }
     }
@@ -90,9 +85,3 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
             .scrollIndicators(.never)
     }
 }
-
-//struct AlbumSectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AlbumSectionView(viewModel: )
-//    }
-//}

@@ -142,6 +142,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		5033A26C288BE4EE00B68FBC /* TODOScreens */ = {
+			isa = PBXGroup;
+			children = (
+				50D464A32879D623001D4829 /* RecentlyPlayedView.swift */,
+				50D464A72879D683001D4829 /* LibraryView.swift */,
+				50D464A52879D663001D4829 /* RecommendationsView.swift */,
+			);
+			path = TODOScreens;
+			sourceTree = "<group>";
+		};
 		504559B1287AA9A200DA6569 /* ChartsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,12 +277,10 @@
 				50F472A7287B238600996773 /* CommonComponents */,
 				50D464702879D3E7001D4829 /* MainView.swift */,
 				50A4B109287FFC71001F2D4E /* MainTabView.swift */,
+				5033A26C288BE4EE00B68FBC /* TODOScreens */,
 				50EE9A732886CE0F00367169 /* MusicBar.swift */,
 				50BA16982882B2B100E2C1ED /* LaunchScreenView */,
-				50D464A32879D623001D4829 /* RecentlyPlayedView.swift */,
-				50D464A72879D683001D4829 /* LibraryView.swift */,
 				50855B16288090B2004A925B /* MusicView */,
-				50D464A52879D663001D4829 /* RecommendationsView.swift */,
 				504559B1287AA9A200DA6569 /* ChartsView */,
 			);
 			path = Modules;
@@ -631,6 +639,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.music.khafizov.Music;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

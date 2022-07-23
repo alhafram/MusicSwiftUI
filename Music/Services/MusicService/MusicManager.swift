@@ -10,15 +10,32 @@ import MusicKit
 import SwiftUI
 import Combine
 
+class MusicConfig: ObservableObject {
+    var item: MusicItem
+    var play: Bool
+    
+    init(item: MusicItem, play: Bool = false) {
+        self.item = item
+        self.play = play
+    }
+}
+
 class MusicManager: ObservableObject {
     
-    @Published var musicItem: MyMusicItem?
+    @Published var musicItem: MusicConfig?
     @Published var songTitle: String = ""
     @Published var musicDuration: TimeInterval = 0.0
     @Published var songIconUrl: URL?
     @Published var status: MusicPlayer.PlaybackStatus = .stopped
     @Published var playbackTime: TimeInterval = 0.0
-    private var timer: Timer?
+    
+    private var timer: AnyCancellable?
+    
+    private func resetMusic() {
+        musicDuration = 0
+        playbackTime = 0
+        status = .stopped
+    }
     
     static func getAuthorizationStatus() async -> MusicAuthorization.Status {
         return await MusicAuthorization.request()
@@ -29,81 +46,43 @@ class MusicManager: ObservableObject {
         ApplicationMusicPlayer.shared
     }
     
-    func setupMusicItem(_ musicItem: MyMusicItem) async -> Bool {
-        if let song = self.musicItem as? Song {
-            let newSong = musicItem as? Song
-            if song == newSong {
-                return false
-            }
-        }
-        self.musicItem = musicItem
-        return true
-    }
-    
     func startObserving() {
-        $musicItem.sink { [weak self] item in
-            guard let self = self else { return }
-            guard let item = item else { return }
-            let currentSong = self.musicItem as? Song
-            if let song = item as? Song {
-                if song == currentSong {
-                    return
-                }
+        $musicItem
+            .compactMap { $0 }
+            .throttle(for: 0.5, scheduler: RunLoop.main, latest: true)
+            .removeDuplicates { $0.item.id == $1.item.id }
+            .compactMap { config -> (Song, Bool)? in
+                guard let song = config.item as? Song else { return nil }
+                return (song, config.play)
+            }
+            .sink { [weak self] song, play in
+                guard let self = self else { return }
+                self.resetMusic()
                 self.playbackTime = 0
                 self.songTitle = song.title
                 self.songIconUrl = song.artwork?.url(width: 50, height: 50)
                 self.musicDuration = song.duration ?? 0
-                self.mediaPlayer.playbackTime = 0
+                self.mediaPlayer.queue = [song]
+                if play {
+                    Task {
+                        try await self.start()
+                    }
+                }
             }
-            
-            self.timer?.invalidate()
-            self.timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { [weak self] timer in
-                guard let self = self else { return }
+            .store(in: &store)
+    }
+    
+    private func setupTimer() {
+        timer?.cancel()
+        timer = Timer.publish(every: 0.3, on: .main, in: .common).autoconnect()
+            .sink { [weak self] _ in
+                guard let self else { return }
                 self.playbackTime = self.mediaPlayer.playbackTime
+                if self.playbackTime >= self.musicDuration {
+                    self.status = .stopped
+                    self.timer?.cancel()
+                }
             }
-        }
-        .store(in: &store)
-        
-        mediaPlayer.state.objectWillChange.sink { [weak self] _ in
-            guard let self = self else { return }
-            self.status = self.mediaPlayer.state.playbackStatus
-        }
-        .store(in: &store)
-    }
-    
-    func play() {
-        guard let song = musicItem as? Song else { return }
-        Task {
-            try await self.play(song: song)
-        }
-    }
-    
-    func get() {
-//            let albumCharts = respone.albumCharts
-//            let playlistCharts = respone.playlistCharts
-//            let musicVideoCharts = respone.musicVideoCharts
-//            let songCharts = respone.songCharts
-        
-        
-        
-//            let album = albumCharts.first?.items.first
-//            print(album?.artwork?.url(width: 300, height: 300))
-//            print(album)
-//
-//            let playlist = playlistCharts.first?.items.first
-//            print(playlist?.artwork?.url(width: 300, height: 300))
-//            print(playlistCharts)
-
-//            let musicVideoChart = musicVideoCharts.first?.items.first
-//            print(musicVideoChart?.artwork?.url(width: 300, height: 300))
-        
-        
-//            let res = try await musicVideoChart?.with([.songs])
-//            print(dump(res?.songs?.first))
-//
-//            try await play(song:(res?.songs?.first)!)
-        
-//            print(respone)
     }
     
     func getSong(searchString: String = "Hello") async -> Song? {
@@ -122,20 +101,6 @@ class MusicManager: ObservableObject {
             return nil
         }
         return song
-    }
-    
-    func getRecentlyPlayed() {
-        Task {
-            //            let request = MusicRecentlyPlayedContainerRequest()
-            //            let response = try await request.response()
-            
-            let request = MusicRecentlyPlayedRequest<Song>()
-            let response = try await request.response()
-            
-            print(response.items)
-            
-            try await play(song: response.items.last!)
-        }
     }
     
     func getRecomendations() {
@@ -157,48 +122,16 @@ class MusicManager: ObservableObject {
         }
     }
     
-    func play(song: Song) async throws {
-        mediaPlayer.queue = [song]
+    func start() async throws {
         try await mediaPlayer.prepareToPlay()
         try await mediaPlayer.play()
-        
-        //        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
-        //            guard self != nil else {
-        //                timer.invalidate()
-        //                return
-        //            }
-        //            let time = self.mediaPlayer.playbackTime
-        //            self?.currentTimePublisher.send(time)
-        //            if mediaPlayer.queue.entries == .init() {
-        //                timer.invalidate()
-        //            }
-        //        }
-        //        let runLoop = RunLoop.current
-        //        runLoop.add(timer, forMode: .default)
-        //        runLoop.run()
-        
-        //            let request = MusicCatalogResourceRequest<Album>(matching: \.id, equalTo: "1603171516")
-        //             let response = try await request.response()
-        //            print(response)
+        self.status = .playing
+        setupTimer()
     }
     
     func pause() {
+        self.status = .paused
         mediaPlayer.pause()
-    }
-    
-    private func prepareToPlay() async throws {
-        if mediaPlayer.queue.entries.count == 0 {
-            guard let song = musicItem as? Song else { return }
-            mediaPlayer.queue = [song]
-        }
-        try await mediaPlayer.prepareToPlay()
-    }
-    
-    func resume() async {
-        Task {
-            try await prepareToPlay()
-            try await mediaPlayer.play()
-        }
     }
     
     func skipTo(_ time: TimeInterval) {
@@ -208,6 +141,7 @@ class MusicManager: ObservableObject {
     func stopPlaying() {
         mediaPlayer.queue.entries = .init()
         mediaPlayer.stop()
+        status = .stopped
     }
 }
 

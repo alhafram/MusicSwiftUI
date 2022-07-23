@@ -17,13 +17,23 @@ struct MusicBar: View {
     @State var progress = MusicBasProgress()
     
     private var progressWidth: CGFloat {
-        if musicManager.musicDuration == 0 || musicManager.status == .stopped {
-            progress.progressWidth = 0
+//        print(musicManager.status, musicManager.playbackTime, musicManager.musicDuration)
+        if musicManager.status == .stopped {
+            return progress.progressWidth
+        }
+        if musicManager.playbackTime > musicManager.musicDuration {
+            return 0
+        }
+        if musicManager.status == .playing && musicManager.playbackTime == musicManager.musicDuration {
             return 0
         }
         let newValue = (musicManager.playbackTime / musicManager.musicDuration) * 150
-        if musicManager.status == .paused && Int(newValue) == 0 {
-            return progress.progressWidth
+        if musicManager.status == .paused && Int((newValue.isNaN || newValue.isInfinite) ? 0 : newValue) == 0 {
+            if musicManager.playbackTime == 0 {
+                return 0
+            } else {
+                return progress.progressWidth
+            }
         }
         if musicManager.status == .playing || musicManager.status == .paused {
             progress.progressWidth = newValue
@@ -33,13 +43,23 @@ struct MusicBar: View {
         }
     }
     
+    @ViewBuilder
     private var imageView: some View {
         CachedAsyncImage(url: musicManager.songIconUrl) { phase in
-            phase.image?.resizable()
-                .frame(width: 50, height: 50)
-                .cornerRadius(4)
-                .padding()
+            switch phase {
+            case .empty:
+                ProgressView()
+            case .failure:
+                EmptyView()
+            case let .success(image):
+                image.resizable()
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(4)
+            @unknown default:
+                fatalError()
+            }
         }
+        .padding()
     }
     
     private var progressView: some View {
@@ -64,10 +84,12 @@ struct MusicBar: View {
         Button {
             if musicManager.status == .playing {
                 musicManager.pause()
+                return
             }
             if musicManager.status == .paused || musicManager.status == .stopped {
                 Task {
-                    await musicManager.resume()
+                    try await musicManager.start()
+                    return
                 }
             }
         } label: {
