@@ -28,6 +28,10 @@ class ChartViewModel<T>: ObservableObject, Identifiable where T: MusicCatalogCha
     
     @Published var items: [ChartViewModelItem]
     
+    var songs: [Song] {
+        return items.compactMap { $0.item as? Song }
+    }
+    
     let title: String
     var batcher: MusicItemCollection<T>
     

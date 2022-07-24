@@ -61,6 +61,7 @@ struct MainTabView: View {
             musicManager.startObserving()
             guard let song else { return }
             musicManager.musicItem = MusicConfig(item: song, play: false)
+            musicManager.putSingleSong(song)
         }
         .onReceive(musicManager.$musicItem, perform: { output in
             output.publisher

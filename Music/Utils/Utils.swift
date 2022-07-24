@@ -61,3 +61,11 @@ extension CGColor {
         return .init(gray: 0, alpha: 0)
     }
 }
+
+extension Array where Element: Hashable {
+    func difference(from other: [Element]) -> [Element] {
+        let thisSet = Set(self)
+        let otherSet = Set(other)
+        return Array(thisSet.symmetricDifference(otherSet))
+    }
+}

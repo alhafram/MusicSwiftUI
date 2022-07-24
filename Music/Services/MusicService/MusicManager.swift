@@ -25,44 +25,31 @@ class MusicManager: ObservableObject {
     @Published var musicItem: MusicConfig?
     @Published var songTitle: String = ""
     @Published var musicDuration: TimeInterval = 0.0
+    @Published var playbackTime: TimeInterval = 0.0
     @Published var songIconUrl: URL?
     @Published var status: MusicPlayer.PlaybackStatus = .stopped
-    @Published var playbackTime: TimeInterval = 0.0
+    @Published var fetchNext = PassthroughSubject<Song, Never>()
     
-    private var timer: AnyCancellable?
-    
-    private func resetMusic() {
-        musicDuration = 0
-        playbackTime = 0
-        status = .stopped
-    }
+    private var store = Set<AnyCancellable>()
+    private var mediaPlayer = ApplicationMusicPlayer.shared
     
     static func getAuthorizationStatus() async -> MusicAuthorization.Status {
         return await MusicAuthorization.request()
     }
     
-    private var store = Set<AnyCancellable>()
-    private var mediaPlayer: ApplicationMusicPlayer {
-        ApplicationMusicPlayer.shared
-    }
-    
     func startObserving() {
         $musicItem
             .compactMap { $0 }
-            .throttle(for: 0.5, scheduler: RunLoop.main, latest: true)
-            .removeDuplicates { $0.item.id == $1.item.id }
+            .throttle(for: 1, scheduler: RunLoop.main, latest: true)
             .compactMap { config -> (Song, Bool)? in
                 guard let song = config.item as? Song else { return nil }
                 return (song, config.play)
             }
             .sink { [weak self] song, play in
                 guard let self = self else { return }
-                self.resetMusic()
-                self.playbackTime = 0
                 self.songTitle = song.title
                 self.songIconUrl = song.artwork?.url(width: 50, height: 50)
                 self.musicDuration = song.duration ?? 0
-                self.mediaPlayer.queue = [song]
                 if play {
                     Task {
                         try await self.start()
@@ -70,19 +57,6 @@ class MusicManager: ObservableObject {
                 }
             }
             .store(in: &store)
-    }
-    
-    private func setupTimer() {
-        timer?.cancel()
-        timer = Timer.publish(every: 0.3, on: .main, in: .common).autoconnect()
-            .sink { [weak self] _ in
-                guard let self else { return }
-                self.playbackTime = self.mediaPlayer.playbackTime
-                if self.playbackTime >= self.musicDuration {
-                    self.status = .stopped
-                    self.timer?.cancel()
-                }
-            }
     }
     
     func getSong(searchString: String = "Hello") async -> Song? {
@@ -125,12 +99,11 @@ class MusicManager: ObservableObject {
     func start() async throws {
         try await mediaPlayer.prepareToPlay()
         try await mediaPlayer.play()
-        self.status = .playing
-        setupTimer()
+        status = .playing
     }
     
     func pause() {
-        self.status = .paused
+        status = .paused
         mediaPlayer.pause()
     }
     
@@ -142,6 +115,56 @@ class MusicManager: ObservableObject {
         mediaPlayer.queue.entries = .init()
         mediaPlayer.stop()
         status = .stopped
+    }
+    
+    var currentList = [Song]()
+    
+    func playSongs(_ songs: [Song]) throws {
+        if songs.isEmpty { return }
+        currentList = songs
+        putMultipleSongs(songs)
+        let config = MusicConfig(item: songs[0], play: true)
+        musicItem = config
+
+        // TODO: - Fix this SHIT, mb MusicKit problem
+        mediaPlayer.queue.objectWillChange
+            .debounce(for: 0.01, scheduler: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let entry = self?.mediaPlayer.queue.currentEntry else { return }
+                print("ENTY!!", entry)
+                switch entry.item {
+                case let .song(song):
+                    if let currentSong = self?.currentList.first(where: { $0.id == song.id }) {
+                        self?.fetchNext.send(currentSong)
+                        let config = MusicConfig(item: currentSong, play: true)
+                        self?.musicItem = config
+                    }
+                default:
+                    return
+                }
+        }
+        .store(in: &store)
+    }
+    
+    func putSingleSong(_ song: Song) {
+        mediaPlayer.queue = [song]
+    }
+    
+    func putMultipleSongs(_ songs: [Song]) {
+        mediaPlayer.queue = .init(for: songs)
+    }
+    
+    func insertToTail(_ songs: [Song]) async throws {
+        currentList.append(contentsOf: songs)
+        try await mediaPlayer.queue.insert(songs, position: .tail)
+    }
+    
+    func playNext() async throws {
+        do {
+            try await mediaPlayer.skipToNextEntry()
+        } catch {
+            print(error)
+        }
     }
 }
 

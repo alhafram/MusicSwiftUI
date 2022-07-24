@@ -35,8 +35,19 @@ struct ChartsView: View {
                                 .environmentObject(chartsProvider)
                         }
                         ForEach(chartsProvider.songChartViewModels) { viewModel in
-                            MusicSectionView(viewModel: viewModel)
+                            MusicSectionView(viewModel: viewModel, showPlayAll: true)
                                 .environmentObject(chartsProvider)
+                                .onReceive(musicManager.fetchNext, perform: { song in
+                                    guard let itemForSong = viewModel.items.first(where: { $0.item.id == song.id }) else { return }
+                                    Task {
+                                        await chartsProvider.fetchNext(currentItem: itemForSong, in: viewModel)
+                                        let songs = viewModel.songs
+                                        let diffSongs = songs.difference(from: musicManager.currentList)
+                                        if !diffSongs.isEmpty {
+                                            try await musicManager.insertToTail(diffSongs)
+                                        }
+                                    }
+                                })
                         }
                         if musicManager.musicItem != nil {
                             Text("")

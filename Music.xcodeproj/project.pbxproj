@@ -17,6 +17,7 @@
 		504559BE287B033C00DA6569 /* AppleLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504559BD287B033C00DA6569 /* AppleLogoView.swift */; };
 		506B66902882CB640054A4CA /* MusicVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506B668F2882CB640054A4CA /* MusicVideoView.swift */; };
 		50855B18288090BD004A925B /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50855B17288090BD004A925B /* MusicViewModel.swift */; };
+		50A30AE2288D52EB00C7A699 /* MusicBarProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A30AE1288D52EB00C7A699 /* MusicBarProgressView.swift */; };
 		50A4B106287FED2E001F2D4E /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4B105287FED2E001F2D4E /* LaunchScreenView.swift */; };
 		50A4B108287FED75001F2D4E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4B107287FED75001F2D4E /* Router.swift */; };
 		50A4B10A287FFC71001F2D4E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4B109287FFC71001F2D4E /* MainTabView.swift */; };
@@ -71,6 +72,7 @@
 		504559BD287B033C00DA6569 /* AppleLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLogoView.swift; sourceTree = "<group>"; };
 		506B668F2882CB640054A4CA /* MusicVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoView.swift; sourceTree = "<group>"; };
 		50855B17288090BD004A925B /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		50A30AE1288D52EB00C7A699 /* MusicBarProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBarProgressView.swift; sourceTree = "<group>"; };
 		50A4B105287FED2E001F2D4E /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		50A4B107287FED75001F2D4E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		50A4B109287FFC71001F2D4E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				50A4B109287FFC71001F2D4E /* MainTabView.swift */,
 				5033A26C288BE4EE00B68FBC /* TODOScreens */,
 				50EE9A732886CE0F00367169 /* MusicBar.swift */,
+				50A30AE1288D52EB00C7A699 /* MusicBarProgressView.swift */,
 				50BA16982882B2B100E2C1ED /* LaunchScreenView */,
 				50855B16288090B2004A925B /* MusicView */,
 				504559B1287AA9A200DA6569 /* ChartsView */,
@@ -441,6 +444,7 @@
 				50A4B10A287FFC71001F2D4E /* MainTabView.swift in Sources */,
 				50855B18288090BD004A925B /* MusicViewModel.swift in Sources */,
 				50D464782879D3E8001D4829 /* Persistence.swift in Sources */,
+				50A30AE2288D52EB00C7A699 /* MusicBarProgressView.swift in Sources */,
 				50D464712879D3E7001D4829 /* MainView.swift in Sources */,
 				502F8D252881B3D40027E2FF /* AlbumChartViewModel.swift in Sources */,
 				50EE9A6D2886B38E00367169 /* Charts.swift in Sources */,

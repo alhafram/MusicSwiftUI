@@ -14,11 +14,30 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
     @EnvironmentObject private var musicManager: MusicManager
     
     @ObservedObject var viewModel: ChartViewModel<T>
+    var showPlayAll = false
     
-    var title: some View {
-        Text(viewModel.title)
-            .font(.title2)
-            .bold()
+    @ViewBuilder
+    private var title: some View {
+        HStack {
+            Text(viewModel.title)
+                .font(.title2)
+                .bold()
+            if showPlayAll  {
+                Spacer()
+                Button {
+                    do {
+                        try musicManager.playSongs(viewModel.songs)
+                    } catch {
+                        print(error)
+                    }
+                } label: {
+                    Text("Play all")
+                        .bold()
+                }
+                .padding(.trailing, 16)
+                .foregroundColor(.accentColor)
+            }
+        }
     }
     
     private func nextFetch(item: ChartViewModelItem) async {
@@ -26,7 +45,7 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
     }
     
     @ViewBuilder
-    func buildItem(item: ChartViewModelItem) -> some View {
+    private func buildItem(item: ChartViewModelItem) -> some View {
         if viewModel.type is Album.Type {
             AlbumView(item: item)
                 .task {
@@ -61,12 +80,13 @@ struct MusicSectionView<T: MusicCatalogChartRequestable>: View {
                 }
                 .onTapGesture {
                     musicManager.musicItem = MusicConfig(item: item.item, play: true)
+                    musicManager.putSingleSong(item.item as! Song)
                 }
         }
     }
     
     @ViewBuilder
-    func buildSection() -> some View {
+    private func buildSection() -> some View {
         title
         ScrollView(.horizontal) {
             LazyHStack(spacing: 20) {

@@ -7,41 +7,9 @@
 
 import SwiftUI
 
-class MusicBasProgress: ObservableObject {
-    @Published var progressWidth: CGFloat = 0
-}
-
 struct MusicBar: View {
     
     @EnvironmentObject var musicManager: MusicManager
-    @State var progress = MusicBasProgress()
-    
-    private var progressWidth: CGFloat {
-//        print(musicManager.status, musicManager.playbackTime, musicManager.musicDuration)
-        if musicManager.status == .stopped {
-            return progress.progressWidth
-        }
-        if musicManager.playbackTime > musicManager.musicDuration {
-            return 0
-        }
-        if musicManager.status == .playing && musicManager.playbackTime == musicManager.musicDuration {
-            return 0
-        }
-        let newValue = (musicManager.playbackTime / musicManager.musicDuration) * 150
-        if musicManager.status == .paused && Int((newValue.isNaN || newValue.isInfinite) ? 0 : newValue) == 0 {
-            if musicManager.playbackTime == 0 {
-                return 0
-            } else {
-                return progress.progressWidth
-            }
-        }
-        if musicManager.status == .playing || musicManager.status == .paused {
-            progress.progressWidth = newValue
-            return newValue
-        } else {
-            return progress.progressWidth
-        }
-    }
     
     @ViewBuilder
     private var imageView: some View {
@@ -49,6 +17,7 @@ struct MusicBar: View {
             switch phase {
             case .empty:
                 ProgressView()
+                    .frame(width: 50, height: 50)
             case .failure:
                 EmptyView()
             case let .success(image):
@@ -62,24 +31,7 @@ struct MusicBar: View {
         .padding()
     }
     
-    private var progressView: some View {
-        ZStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 5)
-                .frame(width: 150, height: 10)
-                .padding(.bottom, 10)
-            RoundedRectangle(cornerRadius: 5)
-                .fill(.red)
-                .background(in: Circle(), fillStyle: FillStyle.init())
-                .frame(width: 150, height: 10)
-                .offset(x: -150 + progressWidth)
-                .mask({
-                    RoundedRectangle(cornerRadius: 5)
-                })
-                .clipped()
-                .padding(.bottom, 10)
-        }
-    }
-    
+    @ViewBuilder
     private var playPauseButton: some View {
         Button {
             if musicManager.status == .playing {
@@ -101,7 +53,9 @@ struct MusicBar: View {
     
     private var forwardButton: some View {
         Button {
-            print("Next song")
+            Task {
+                try await musicManager.playNext()
+            }
         } label: {
             Image(systemName: "forward")
                 .bold()
@@ -115,7 +69,7 @@ struct MusicBar: View {
             VStack(alignment: .leading) {
                 Text(musicManager.songTitle)
                     .padding(.top, 15)
-                progressView
+                MusicBarProgressView()
             }
             Spacer()
             playPauseButton
