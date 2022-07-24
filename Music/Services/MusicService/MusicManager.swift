@@ -131,7 +131,6 @@ class MusicManager: ObservableObject {
             .debounce(for: 0.01, scheduler: DispatchQueue.main)
             .sink { [weak self] _ in
                 guard let entry = self?.mediaPlayer.queue.currentEntry else { return }
-                print("ENTY!!", entry)
                 switch entry.item {
                 case let .song(song):
                     if let currentSong = self?.currentList.first(where: { $0.id == song.id }) {
@@ -160,6 +159,9 @@ class MusicManager: ObservableObject {
     }
     
     func playNext() async throws {
+        if mediaPlayer.queue.entries.count <= 1 {
+            return
+        }
         do {
             try await mediaPlayer.skipToNextEntry()
         } catch {

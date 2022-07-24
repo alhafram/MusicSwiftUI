@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import MusicKit
 
 struct MusicBar: View {
     
     @EnvironmentObject var musicManager: MusicManager
+    @State private var musicStatus: MusicPlayer.PlaybackStatus = .stopped
     
     @ViewBuilder
     private var imageView: some View {
@@ -34,21 +36,24 @@ struct MusicBar: View {
     @ViewBuilder
     private var playPauseButton: some View {
         Button {
-            if musicManager.status == .playing {
+            if musicStatus == .playing {
                 musicManager.pause()
                 return
             }
-            if musicManager.status == .paused || musicManager.status == .stopped {
+            if musicStatus == .paused || musicStatus == .stopped {
                 Task {
                     try await musicManager.start()
-                    return
                 }
             }
         } label: {
-            Image(systemName: musicManager.status == .playing ? "pause" : "play")
+            Image(systemName: musicStatus == .playing ? "pause" : "play")
                 .bold()
         }
         .padding()
+        // TODO: - Fix this SHIT, mb swiftui problem
+        .onReceive(musicManager.$status) { output in
+            self.musicStatus = output
+        }
     }
     
     private var forwardButton: some View {
